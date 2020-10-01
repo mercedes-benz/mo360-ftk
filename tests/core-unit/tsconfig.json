@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "lib": ["dom", "es2015" ],
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "temp",
+    "declaration": false,
+    "removeComments": false,
+    "types": ["@types/jasmine"]
+  },
+  "include": ["typings.d.ts", "src/**/*.ts", "src/**/*.tsx"]
+}

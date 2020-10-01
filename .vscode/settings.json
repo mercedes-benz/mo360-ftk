@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "rush.json": "jsonc",
+    "command-line.json": "jsonc",
+    "common-versions.json": "jsonc",
+    "experiments.json": "jsonc",
+    "version-policies.json": "jsonc",
+    "*.css": "scss",
+    ".nycrc": "json",
+    ".prettierignore": "gitignore",
+    ".lintstagedrc": "json"
+  }
+}

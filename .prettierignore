@@ -1,0 +1,134 @@
+#-------------------------------------------------------------------------------------------------------------------
+# Keep this section in sync with .gitignore
+#-------------------------------------------------------------------------------------------------------------------
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+.cache/
+dist/
+lib/
+
+# Runtime data #
+################
+*.pid
+*.seed
+*.pid.lock
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.tgz
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE #
+#######
+.idea/
+*.iml
+.vscode/
+
+# Node + NPM #
+##############
+node_modules/
+.npm
+
+# Common toolchain intermediate files #
+#######################################
+temp
+
+# Rush files #
+##############
+common/temp/**
+package-deps.json
+
+# eslint cache #
+################
+.eslintcache
+
+# dotenv environment variables file #
+#####################################
+.env
+
+#-------------------------------------------------------------------------------------------------------------------
+# Prettier-specific overrides
+#-------------------------------------------------------------------------------------------------------------------
+
+# Templates #
+#############
+*.ejs
+
+# Image files #
+###############
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+
+# Font files #
+##############
+*.ttf
+*.svg
+*.woff
+*.eot
+*.woff2
+*.otf
+
+# CSS Typings #
+###############
+*.css.d.ts
+
+# Rush files #
+##############
+common/changes/
+common/scripts/
+common/config/
+CHANGELOG.*
+
+# Package manager files #
+#########################
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+shrinkwrap.json
+
+# Build outputs #
+#################
+dist
+lib
+
+# Prettier reformats code blocks inside Markdown, which affects rendered output #
+#################################################################################
+*.md
