@@ -13,6 +13,7 @@ module.exports = {
   env: {
     development: {
       sourceMaps: 'inline',
+      compact: false,
     },
   },
   comments: false,
