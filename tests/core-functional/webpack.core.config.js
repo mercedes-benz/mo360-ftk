@@ -68,6 +68,7 @@ const config = {
     disableHostCheck: true,
     host: 'localhost',
     port: 8080,
+    quiet: true,
   },
 };
 

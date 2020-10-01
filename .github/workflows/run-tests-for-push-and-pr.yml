@@ -1,0 +1,32 @@
+name: Run Tests for Push and PR to master, development and release/*
+
+on:
+  push:
+    branches:
+    - master
+    - development
+  pull_request:
+    branches: 
+    - master
+    - development
+    - release/*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js lts/erbium
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install Rush
+      run: npm install --global @microsoft/rush
+    - name: Install dependencies
+      run: rush install
+    - name: Build projects
+      run: rush build
+    - name: Run tests
+      run: rush test

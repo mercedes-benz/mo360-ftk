@@ -65,6 +65,7 @@ const config = {
     disableHostCheck: true,
     host: 'localhost',
     port: 8081,
+    quiet: true,
 
     // Proxy some swidgets for asset path tests / deep linking where we need subfolder pathes
     proxy: {
