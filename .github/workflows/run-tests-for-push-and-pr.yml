@@ -12,7 +12,7 @@ on:
     - release/*
 
 jobs:
-  build:
+  push_and_pr_test:
 
     runs-on: ubuntu-latest
     
