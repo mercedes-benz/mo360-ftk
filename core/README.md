@@ -1,8 +1,8 @@
-![Banner](./docs/assets/banner.png)
+![Banner](https://github.com/Daimler/mo360-ftk/raw/master/docs/assets/banner.png)
 
 # Daimler MO360 Frontend Toolkit (FTK)
 
-If you want to learn more about the Daimler MO360 FTK, check out our [documentation](./docs/README.md).
+If you want to learn more about the Daimler MO360 FTK, check out our [documentation](https://github.com/Daimler/mo360-ftk/docs/README.md).
 
 ___
 
@@ -40,11 +40,6 @@ From zero to a running WebApp with only a few simple commands:
    ```
 
 **Happy coding!**
-
-## Requirements
-
-* Admin rights on your local machine
-* NPM installed
 
 ## Contributing
 
