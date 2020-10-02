@@ -55,6 +55,7 @@ dependencies:
   favicons-webpack-plugin: 4.2.0_webpack@4.39.3
   file-loader: 6.1.0_webpack@4.39.3
   fork-ts-checker-webpack-plugin: 1.5.1
+  friendly-errors-webpack-plugin: 1.7.0_webpack@4.39.3
   html-webpack-plugin: 4.5.0_webpack@4.39.3
   husky: 3.0.9
   intl-pluralrules: 1.0.3
@@ -1127,6 +1128,7 @@ packages:
       react: ^16.0.0
     resolution:
       integrity: sha512-MsOdCBB7c5YNyB4iDDct+tS7AihvYyfwZVV+z/QnbTjPgxH98kqIDXO92nU7tLXp0OtYFErHZfcWjtszP/572w==
+      tarball: '@hot-loader/react-dom/-/react-dom-16.9.0.tgz'
   /@istanbuljs/load-nyc-config/1.1.0:
     dependencies:
       camelcase: 5.3.1
@@ -5127,6 +5129,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
+  /error-stack-parser/2.0.6:
+    dependencies:
+      stackframe: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha512-d51brTeqC+BHlwF0BhPtcYgF5nlzf9ZZ0ZIUQNZpc9ZB9qw5IJ2diTrBY9jlCJkTLITYPjmiX6OWCwH+fuyNgQ==
   /es-abstract/1.17.6:
     dependencies:
       es-to-primitive: 1.2.1
@@ -6231,6 +6239,17 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  /friendly-errors-webpack-plugin/1.7.0_webpack@4.39.3:
+    dependencies:
+      chalk: 1.1.3
+      error-stack-parser: 2.0.6
+      string-width: 2.1.1
+      webpack: 4.39.3_webpack@4.39.3
+    dev: false
+    peerDependencies:
+      webpack: ^2.0.0 || ^3.0.0 || ^4.0.0
+    resolution:
+      integrity: sha512-K27M3VK30wVoOarP651zDmb93R9zF28usW4ocaK3mfQeIEI5BPht/EzZs5E8QLLwbLRJQMwscAjDxYPb1FuNiw==
   /from2/2.3.0:
     dependencies:
       inherits: 2.0.4
@@ -12811,6 +12830,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-0H7QK2ECz3fyZMzQ8rH0j2ykpfbnd20BFtfg/SqVC2+sCTtcw0aDTGB7dk+de4U4uUeuz6nOtJcrkFFLG1B0Rg==
+  /stackframe/1.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-GrdeshiRmS1YLMYgzF16olf2jJ/IzxXY9lhKOskuVziubpTYcYqyOwYeJKzQkwy7uN0fYSsbsC4RQaXf9LCrYA==
   /state-toggle/1.0.3:
     dev: false
     resolution:
@@ -14720,6 +14743,7 @@ packages:
       favicons-webpack-plugin: 4.2.0_webpack@4.39.3
       file-loader: 6.1.0_webpack@4.39.3
       fork-ts-checker-webpack-plugin: 1.5.1
+      friendly-errors-webpack-plugin: 1.7.0_webpack@4.39.3
       html-webpack-plugin: 4.5.0_webpack@4.39.3
       husky: 3.0.9
       lint-staged: 10.2.13
@@ -14759,7 +14783,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-boilerplate-source'
     resolution:
-      integrity: sha512-G3X7awZUo+D8Tm5W+1l1Q1motPC3ex50wJUO6E0mv7BlNGNXrRQFEUTtbRIJUtuS27ri58nQMEhKqyGePHEcSQ==
+      integrity: sha512-mnOh2k4nj2uObP0VRBfeJBScgVFw5ATOY1zVumNlHman5SMWu1Ao6uM2ak4EVg5mn00MrZ9+u9UbxIvBB6k3Bg==
       tarball: 'file:projects/ftk-boilerplate-source.tgz'
     version: 0.0.0
   'file:projects/ftk-boilerplate.tgz':
@@ -14770,7 +14794,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-boilerplate'
     resolution:
-      integrity: sha512-hzMAdCXn1Rvr+i58lYoudCzNZr8LYT/qKtDaBWlwT8opn7FicBF4p4J+w7eKjluCOL6HhBN9h6M1F9aciAU4ow==
+      integrity: sha512-ZdRvF9lMQDan2bqk1wvm1IE491gRFenQcTBJA/7gZH/hZ4XhllRZ4Gw2ROSAKYEP+EkFqMB3bbev8CaGBBFS5Q==
       tarball: 'file:projects/ftk-boilerplate.tgz'
     version: 0.0.0
   'file:projects/ftk-core-tests-functional.tgz':
@@ -14818,7 +14842,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-core-tests-functional'
     resolution:
-      integrity: sha512-SovRjuj28Df6DQ2FnIL3LSQhq6sXsjKBPhw+DLSGkOHQuxzlYlgeqlPus0uhjDbbtMGa8bZX/bYKdV7VPBWSLg==
+      integrity: sha512-5VqHzHyp1efDWgMZM6FuJth1XuPEFMPg8C0NvJJKjvj5ruTnsKZ1/WtubxMJ6WM5X3WlVbLA64aajh2hb5Igdw==
       tarball: 'file:projects/ftk-core-tests-functional.tgz'
     version: 0.0.0
   'file:projects/ftk-core-tests-unit.tgz_@babel+core@7.11.6':
@@ -14853,7 +14877,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
     resolution:
-      integrity: sha512-MzhqsVNsEEz3J2c6egdNFSm5H/RiG9HVXdKIsyhCS8DhvmgLdnrXiX4HCbAMq465lBPECe6XsqfxqDceJFz44g==
+      integrity: sha512-uGSCxSub7twUjSPiHeMZfyyP0s+KX8ngPy28Lu1W/MohjwriLxzcT6RCCBMmQqBlPSV31ZOB+C+OESrkESBw1A==
       tarball: 'file:projects/ftk-core-tests-unit.tgz'
     version: 0.0.0
   'file:projects/ftk-core.tgz':
@@ -14876,9 +14900,10 @@ packages:
     dev: false
     name: '@rush-temp/ftk-core'
     resolution:
-      integrity: sha512-gjNBB06XQcG9uvNInPa+VUoIT1VqbGcQftt1c2CodJ1VwVdqk4xZaAOyyo5XBF8Av5MJIH+7K4HLSCAZ2S9ddQ==
+      integrity: sha512-yUeBl+ei675Du5TaOdZW91fNvpFXxaiukpWPEQYk5oQAGamwX/9f8HPZuf+hXZWAY3Pfm8hMq5zAuQzCiEBJ8g==
       tarball: 'file:projects/ftk-core.tgz'
     version: 0.0.0
+registry: ''
 specifiers:
   '@babel/cli': ~7.11.5
   '@babel/core': ^7.9.0
@@ -14936,6 +14961,7 @@ specifiers:
   favicons-webpack-plugin: ~4.2.0
   file-loader: ~6.1.0
   fork-ts-checker-webpack-plugin: ~1.5.0
+  friendly-errors-webpack-plugin: ~1.7.0
   html-webpack-plugin: ~4.5.0
   husky: ~3.0.5
   intl-pluralrules: 1.0.3
@@ -14972,7 +14998,7 @@ specifiers:
   reflect-metadata: 0.1.13
   regenerator-runtime: ~0.13.3
   replace-in-file: ^6.1.0
-  rimraf: ~3.0.0
+  rimraf: ~3.0.2
   route-parser: 0.0.5
   simple-progress-webpack-plugin: ~1.1.2
   style-loader: ~1.0.0
