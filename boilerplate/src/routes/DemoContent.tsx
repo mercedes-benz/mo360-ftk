@@ -1,6 +1,15 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
+/**
+ * Note:
+ * This route uses the class-based react style and exists as an example
+ * on how to migrate existing class-based react routes and components.
+ *
+ * If you're implementing a new frontend, please look at the Home route and
+ * use the hook-based react style.
+ */
+
 import {
   createStyles,
   withStyles,
