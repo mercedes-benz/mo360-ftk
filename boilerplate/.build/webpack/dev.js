@@ -5,6 +5,7 @@ const base = require('./base'),
   merge = require('webpack-merge'),
   webpack = require('webpack'),
   forkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'),
+  friendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
   path = require('path'),
   packageJson = require(path.resolve(process.cwd(), 'package.json'));
 
@@ -21,6 +22,7 @@ const devServerConfig = {
   stats: process.env.verbose === 'true' ? 'normal' : 'errors-only',
   publicPath: packageJson.config.devServer.publicPath || '/',
   open: packageJson.config.devServer.open || true,
+  quiet: true,
 };
 if (devServerConfig.host === '0.0.0.0') {
   devServerConfig.openPage = `http://localhost:${devServerConfig.port}${devServerConfig.publicPath}`;
@@ -65,6 +67,7 @@ const devConfig = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new friendlyErrorsWebpackPlugin(),
   ],
   devServer: devServerConfig,
 };
