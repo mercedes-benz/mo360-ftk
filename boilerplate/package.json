@@ -1,6 +1,6 @@
 {
   "name": "@daimler/ftk-boilerplate-source",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Daimler MO360 Frontend Toolkit | Boilerplate (Source)",
   "license": "MIT",
   "author": "Daimler TSS GmbH",
@@ -57,7 +57,7 @@
     "ie >= 11"
   ],
   "dependencies": {
-    "@daimler/ftk-core": "0.1.1",
+    "@daimler/ftk-core": "0.2.0",
     "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.3.3",
