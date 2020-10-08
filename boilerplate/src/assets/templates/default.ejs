@@ -160,8 +160,10 @@
       </div>
     <% } %>
 
-    <% for (key in htmlWebpackPlugin.files.js) { %>
-      <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script>
+    <% if (htmlWebpackPlugin.options.prodMode) { %>
+      <% for (key in htmlWebpackPlugin.files.js) { %>
+        <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script>
+      <% } %>
     <% } %>
   </body>
 </html>
