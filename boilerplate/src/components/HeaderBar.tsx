@@ -3,7 +3,6 @@
 
 import * as React from 'react';
 import { AppBar, Typography, Toolbar, Grid, Link, makeStyles } from '@material-ui/core';
-
 import LanguageSwitch from './LanguageSwitch';
 import { useRouter } from '@daimler/ftk-core';
 

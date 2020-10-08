@@ -4,7 +4,6 @@
 import { Theme, Container, Typography, Box, Button, makeStyles } from '@material-ui/core';
 import { useI18n, useConfig, useRouter } from '@daimler/ftk-core';
 import * as React from 'react';
-
 import Logo from '../components/Logo';
 import ProjectConfig from '../globals/interfaces/ProjectConfig';
 

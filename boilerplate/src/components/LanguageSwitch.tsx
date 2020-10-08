@@ -3,7 +3,6 @@
 
 import * as React from 'react';
 import { Typography, Button, makeStyles } from '@material-ui/core';
-
 import LanguageIcon from '@material-ui/icons/Language';
 import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
 import { useI18n } from '@daimler/ftk-core';
