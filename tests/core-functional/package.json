@@ -18,8 +18,8 @@
     "@daimler/ftk-core": "0.2.0",
     "lodash": "4.17.20",
     "path": "0.12.7",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "route-parser": "0.0.5"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "postcss": "~7.0.17",
     "postcss-import-sync": "~7.1.4",
     "rimraf": "~3.0.2",
-    "tslib": "~1.10.0",
+    "tslib": "^1.10.0",
     "typescript": "~3.5.3",
     "wdio-chromedriver-service": "^6.0.2",
     "webpack": "~4.39.3",
