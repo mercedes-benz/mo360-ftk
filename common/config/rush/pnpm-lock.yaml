@@ -7,10 +7,9 @@ dependencies:
   '@babel/register': 7.11.5_@babel+core@7.11.6
   '@babel/runtime': 7.5.5
   '@formatjs/intl-relativetimeformat': 2.8.0
-  '@hot-loader/react-dom': 16.9.0_react@16.9.0
-  '@material-ui/core': 4.11.0_00d424784c8a5cbfdd3817e60cf409d3
-  '@material-ui/icons': 4.9.1_5f579479a69593500c3f094103c22d27
-  '@material-ui/styles': 4.10.0_00d424784c8a5cbfdd3817e60cf409d3
+  '@hot-loader/react-dom': 16.9.0
+  '@material-ui/core': 4.11.0_54d28c969545155806b9a2cfa2f1b5be
+  '@material-ui/icons': 4.9.1_f153cd9ee1f10a123f6c18a8fe1cf71f
   '@rush-temp/ftk-boilerplate': 'file:projects/ftk-boilerplate.tgz'
   '@rush-temp/ftk-boilerplate-source': 'file:projects/ftk-boilerplate-source.tgz'
   '@rush-temp/ftk-core': 'file:projects/ftk-core.tgz'
@@ -26,7 +25,7 @@ dependencies:
   '@types/route-parser': 0.1.1
   '@typescript-eslint/eslint-plugin': 2.0.0_2a1e801e0b3e54b93f07dd234cd79684
   '@typescript-eslint/parser': 2.0.0_eslint@6.3.0
-  '@ungap/url-search-params': 0.1.4
+  '@ungap/url-search-params': 0.2.2
   '@wdio/cli': 6.5.2
   '@wdio/jasmine-framework': 6.5.0_@wdio+cli@6.5.2
   '@wdio/local-runner': 6.5.2_@wdio+cli@6.5.2
@@ -85,10 +84,9 @@ dependencies:
   postcss-sorting: 5.0.1
   postcss-unprefix: 2.1.4_postcss@7.0.34
   prettier: 2.1.2
-  react: 16.9.0
-  react-dom: 16.9.0_react@16.9.0
-  react-hot-loader: 4.12.21_00d424784c8a5cbfdd3817e60cf409d3
-  react-intl: 3.1.10_285a14d39db82e38eafa9a8955ab9a1c
+  react-dom: 16.9.0
+  react-hot-loader: 4.12.21_54d28c969545155806b9a2cfa2f1b5be
+  react-intl: 3.1.10_@types+react@16.9.49
   reflect-metadata: 0.1.13
   regenerator-runtime: 0.13.7
   replace-in-file: 6.1.0
@@ -1116,6 +1114,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KWk80UPIzPmUg+P0rKh6TqspRw0G6eux1PuJr+zz47ftMaZ9QDwbGzHZbtzWkl5hgayM/qrKRutllRC7D/vVXQ==
+  /@hot-loader/react-dom/16.9.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      scheduler: 0.15.0
+    dev: false
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-MsOdCBB7c5YNyB4iDDct+tS7AihvYyfwZVV+z/QnbTjPgxH98kqIDXO92nU7tLXp0OtYFErHZfcWjtszP/572w==
+      tarball: '@hot-loader/react-dom/-/react-dom-16.9.0.tgz'
   /@hot-loader/react-dom/16.9.0_react@16.9.0:
     dependencies:
       loose-envify: 1.4.0
@@ -1593,6 +1603,34 @@ packages:
         optional: true
     resolution:
       integrity: sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
+  /@material-ui/core/4.11.0_54d28c969545155806b9a2cfa2f1b5be:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      '@material-ui/styles': 4.10.0_54d28c969545155806b9a2cfa2f1b5be
+      '@material-ui/system': 4.9.14_54d28c969545155806b9a2cfa2f1b5be
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
+      '@material-ui/utils': 4.10.2_react-dom@16.9.0
+      '@types/react': 16.9.49
+      '@types/react-transition-group': 4.4.0
+      clsx: 1.1.1
+      hoist-non-react-statics: 3.3.2
+      popper.js: 1.16.1-lts
+      prop-types: 15.7.2
+      react-dom: 16.9.0
+      react-is: 16.13.1
+      react-transition-group: 4.4.1_react-dom@16.9.0
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      '@types/react': ^16.8.6
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    resolution:
+      integrity: sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
   /@material-ui/icons/4.9.1_5f579479a69593500c3f094103c22d27:
     dependencies:
       '@babel/runtime': 7.5.5
@@ -1600,6 +1638,25 @@ packages:
       '@types/react': 16.9.49
       react: 16.9.0
       react-dom: 16.9.0_react@16.9.0
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      '@material-ui/core': ^4.0.0
+      '@types/react': ^16.8.6
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    resolution:
+      integrity: sha512-GBitL3oBWO0hzBhvA9KxqcowRUsA0qzwKkURyC8nppnC3fw54KPKZ+d4V1Eeg/UnDRSzDaI9nGCdel/eh9AQMg==
+  /@material-ui/icons/4.9.1_f153cd9ee1f10a123f6c18a8fe1cf71f:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      '@material-ui/core': 4.11.0_54d28c969545155806b9a2cfa2f1b5be
+      '@types/react': 16.9.49
+      react-dom: 16.9.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1646,6 +1703,38 @@ packages:
         optional: true
     resolution:
       integrity: sha512-XPwiVTpd3rlnbfrgtEJ1eJJdFCXZkHxy8TrdieaTvwxNYj42VnnCyFzxYeNW9Lhj4V1oD8YtQ6S5Gie7bZDf7Q==
+  /@material-ui/styles/4.10.0_54d28c969545155806b9a2cfa2f1b5be:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      '@emotion/hash': 0.8.0
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
+      '@material-ui/utils': 4.10.2_react-dom@16.9.0
+      '@types/react': 16.9.49
+      clsx: 1.1.1
+      csstype: 2.6.13
+      hoist-non-react-statics: 3.3.2
+      jss: 10.4.0
+      jss-plugin-camel-case: 10.4.0
+      jss-plugin-default-unit: 10.4.0
+      jss-plugin-global: 10.4.0
+      jss-plugin-nested: 10.4.0
+      jss-plugin-props-sort: 10.4.0
+      jss-plugin-rule-value-function: 10.4.0
+      jss-plugin-vendor-prefixer: 10.4.0
+      prop-types: 15.7.2
+      react-dom: 16.9.0
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      '@types/react': ^16.8.6
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    resolution:
+      integrity: sha512-XPwiVTpd3rlnbfrgtEJ1eJJdFCXZkHxy8TrdieaTvwxNYj42VnnCyFzxYeNW9Lhj4V1oD8YtQ6S5Gie7bZDf7Q==
   /@material-ui/system/4.9.14_00d424784c8a5cbfdd3817e60cf409d3:
     dependencies:
       '@babel/runtime': 7.5.5
@@ -1655,6 +1744,26 @@ packages:
       prop-types: 15.7.2
       react: 16.9.0
       react-dom: 16.9.0_react@16.9.0
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      '@types/react': ^16.8.6
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    resolution:
+      integrity: sha512-oQbaqfSnNlEkXEziDcJDDIy8pbvwUmZXWNqlmIwDqr/ZdCK8FuV3f4nxikUh7hvClKV2gnQ9djh5CZFTHkZj3w==
+  /@material-ui/system/4.9.14_54d28c969545155806b9a2cfa2f1b5be:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      '@material-ui/utils': 4.10.2_react-dom@16.9.0
+      '@types/react': 16.9.49
+      csstype: 2.6.13
+      prop-types: 15.7.2
+      react-dom: 16.9.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1678,6 +1787,20 @@ packages:
         optional: true
     resolution:
       integrity: sha512-7cqRjrY50b8QzRSYyhSpx4WRw2YuO0KKIGQEVk5J8uoz2BanawykgZGoWEqKm7pVIbzFDN0SpPcVV4IhOFkl8A==
+  /@material-ui/utils/4.10.2_react-dom@16.9.0:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      prop-types: 15.7.2
+      react-dom: 16.9.0
+      react-is: 16.13.1
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    resolution:
+      integrity: sha512-eg29v74P7W5r6a4tWWDAAfZldXIzfyO1am2fIsC39hdUUHm/33k6pGOKPbgDjg/U/4ifmgAePy/1OjkKN6rFRw==
   /@material-ui/utils/4.10.2_react-dom@16.9.0+react@16.9.0:
     dependencies:
       '@babel/runtime': 7.5.5
@@ -2062,10 +2185,10 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     resolution:
       integrity: sha512-NXbmzA3vWrSgavymlzMWNecgNOuiMMp62MO3kI7awZRLRcsA1QrYWo6q08m++uuAGVbXH/prZi2y1AWuhSu63w==
-  /@ungap/url-search-params/0.1.4:
+  /@ungap/url-search-params/0.2.2:
     dev: false
     resolution:
-      integrity: sha512-RLwrxCTDNiNev9hpr9rDq8NyeQ8Nn0X1we4Wu7Tlf368I8r+7hBj3uObhifhuLk74egaYaSX5nUsBlWz6kjj+A==
+      integrity: sha512-qQsguKXZVKdCixOHX9jqnX/K/1HekPDpGKyEcXHT+zR6EjGA7S4boSuelL4uuPv6YfhN0n8c4UxW+v/Z3gM2iw==
   /@wdio/cli/6.5.2:
     dependencies:
       '@wdio/config': 6.4.7
@@ -11461,6 +11584,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /react-dom/16.9.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      scheduler: 0.15.0
+    dev: false
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
   /react-dom/16.9.0_react@16.9.0:
     dependencies:
       loose-envify: 1.4.0
@@ -11498,6 +11632,30 @@ packages:
         optional: true
     resolution:
       integrity: sha512-Ynxa6ROfWUeKWsTHxsrL2KMzujxJVPjs385lmB2t5cHUxdoRPGind9F00tOkdc1l5WBleOF4XEAMILY1KPIIDA==
+  /react-hot-loader/4.12.21_54d28c969545155806b9a2cfa2f1b5be:
+    dependencies:
+      '@types/react': 16.9.49
+      fast-levenshtein: 2.0.6
+      global: 4.4.0
+      hoist-non-react-statics: 3.3.2
+      loader-utils: 1.4.0
+      prop-types: 15.7.2
+      react-dom: 16.9.0
+      react-lifecycles-compat: 3.0.4
+      shallowequal: 1.1.0
+      source-map: 0.7.3
+    dev: false
+    engines:
+      node: '>= 6'
+    peerDependencies:
+      '@types/react': ^15.0.0 || ^16.0.0
+      react: ^15.0.0 || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    resolution:
+      integrity: sha512-Ynxa6ROfWUeKWsTHxsrL2KMzujxJVPjs385lmB2t5cHUxdoRPGind9F00tOkdc1l5WBleOF4XEAMILY1KPIIDA==
   /react-intl/3.1.10_285a14d39db82e38eafa9a8955ab9a1c:
     dependencies:
       '@formatjs/intl-relativetimeformat': 2.8.0
@@ -11518,6 +11676,25 @@ packages:
       react: ^16.3.0
     resolution:
       integrity: sha512-Fr5klqJB/wH3Jyc/RlLsAXFEQew2BzzmVtCf6NacEdisgHDvc2JZnI241Y6fOz2rI1rmgiEmgwj+OF0gQElueg==
+  /react-intl/3.1.10_@types+react@16.9.49:
+    dependencies:
+      '@formatjs/intl-relativetimeformat': 2.8.0
+      '@types/hoist-non-react-statics': 3.3.1
+      '@types/invariant': 2.2.34
+      '@types/react': 16.9.49
+      hoist-non-react-statics: 3.3.2
+      intl-format-cache: 4.3.1
+      intl-locales-supported: 1.8.12
+      intl-messageformat: 6.1.11
+      intl-messageformat-parser: 3.6.4
+      invariant: 2.2.4
+      shallow-equal: 1.2.1
+    dev: false
+    peerDependencies:
+      '@types/react': ^16.0.0
+      react: ^16.3.0
+    resolution:
+      integrity: sha512-Fr5klqJB/wH3Jyc/RlLsAXFEQew2BzzmVtCf6NacEdisgHDvc2JZnI241Y6fOz2rI1rmgiEmgwj+OF0gQElueg==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -11526,6 +11703,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  /react-transition-group/4.4.1_react-dom@16.9.0:
+    dependencies:
+      '@babel/runtime': 7.5.5
+      dom-helpers: 5.2.0
+      loose-envify: 1.4.0
+      prop-types: 15.7.2
+      react-dom: 16.9.0
+    dev: false
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    resolution:
+      integrity: sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
   /react-transition-group/4.4.1_react-dom@16.9.0+react@16.9.0:
     dependencies:
       '@babel/runtime': 7.5.5
@@ -14724,7 +14914,7 @@ packages:
       '@types/react-dom': 16.9.8
       '@typescript-eslint/eslint-plugin': 2.0.0_2a1e801e0b3e54b93f07dd234cd79684
       '@typescript-eslint/parser': 2.0.0_eslint@6.3.0
-      '@ungap/url-search-params': 0.1.4
+      '@ungap/url-search-params': 0.2.2
       babel-loader: 8.1.0_e553f90d6833e2c50eca8afbf3ca9d0f
       copy-webpack-plugin: 6.0.4_webpack@4.39.3
       cross-env: 7.0.2
@@ -14783,7 +14973,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-boilerplate-source'
     resolution:
-      integrity: sha512-mnOh2k4nj2uObP0VRBfeJBScgVFw5ATOY1zVumNlHman5SMWu1Ao6uM2ak4EVg5mn00MrZ9+u9UbxIvBB6k3Bg==
+      integrity: sha512-WVU/y2Q4A2XE/n3rxT1/BfBIjRRAkTipEG2OWQgv1dpnGCGmFEP0Rx7dWNdOjxpkFY91mKQJs9rlqeHL2vXkgg==
       tarball: 'file:projects/ftk-boilerplate-source.tgz'
     version: 0.0.0
   'file:projects/ftk-boilerplate.tgz':
@@ -14842,7 +15032,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-core-tests-functional'
     resolution:
-      integrity: sha512-5VqHzHyp1efDWgMZM6FuJth1XuPEFMPg8C0NvJJKjvj5ruTnsKZ1/WtubxMJ6WM5X3WlVbLA64aajh2hb5Igdw==
+      integrity: sha512-gjUV4LUMpmEtPl8XysHvabzIyyViMnuOu4HASAM8iPcTEaQey9Z2cAJ/LuKP1JJsMUxDdheaY8aQ1Ym5bFK8gg==
       tarball: 'file:projects/ftk-core-tests-functional.tgz'
     version: 0.0.0
   'file:projects/ftk-core-tests-unit.tgz_@babel+core@7.11.6':
@@ -14877,7 +15067,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
     resolution:
-      integrity: sha512-uGSCxSub7twUjSPiHeMZfyyP0s+KX8ngPy28Lu1W/MohjwriLxzcT6RCCBMmQqBlPSV31ZOB+C+OESrkESBw1A==
+      integrity: sha512-c4kDI4IqQdu9YoD5Be2cBwMGxfNZzIFrSTkt2OsPg5nRaZG/YPLilpsr9fPvNL9SPEACebhZNM4wYOvHyPYjdA==
       tarball: 'file:projects/ftk-core-tests-unit.tgz'
     version: 0.0.0
   'file:projects/ftk-core.tgz':
@@ -14900,7 +15090,7 @@ packages:
     dev: false
     name: '@rush-temp/ftk-core'
     resolution:
-      integrity: sha512-yUeBl+ei675Du5TaOdZW91fNvpFXxaiukpWPEQYk5oQAGamwX/9f8HPZuf+hXZWAY3Pfm8hMq5zAuQzCiEBJ8g==
+      integrity: sha512-Z/EMAEr9of/rLY3nre1C3mF9MngMFl4wPuqCHpFUZ6DdTONbBRS7p1Ez+cAcyf3ep+K+aOEIYWfLi9nSNX6+8Q==
       tarball: 'file:projects/ftk-core.tgz'
     version: 0.0.0
 registry: ''
@@ -14916,7 +15106,6 @@ specifiers:
   '@hot-loader/react-dom': ~16.9.0
   '@material-ui/core': ^4.4.0
   '@material-ui/icons': ^4.5.1
-  '@material-ui/styles': ^4.3.3
   '@rush-temp/ftk-boilerplate': 'file:./projects/ftk-boilerplate.tgz'
   '@rush-temp/ftk-boilerplate-source': 'file:./projects/ftk-boilerplate-source.tgz'
   '@rush-temp/ftk-core': 'file:./projects/ftk-core.tgz'
@@ -14932,7 +15121,7 @@ specifiers:
   '@types/route-parser': 0.1.1
   '@typescript-eslint/eslint-plugin': ~2.0.0
   '@typescript-eslint/parser': ~2.0.0
-  '@ungap/url-search-params': ~0.1.4
+  '@ungap/url-search-params': ~0.2.2
   '@wdio/cli': ^6.0.5
   '@wdio/jasmine-framework': ^6.0.4
   '@wdio/local-runner': ^6.0.5
@@ -14991,9 +15180,8 @@ specifiers:
   postcss-sorting: ~5.0.1
   postcss-unprefix: ~2.1.4
   prettier: ^2.1.1
-  react: ~16.9.0
-  react-dom: ~16.9.0
-  react-hot-loader: ~4.12.12
+  react-dom: ^16.9.0
+  react-hot-loader: ^4.12.12
   react-intl: 3.1.10
   reflect-metadata: 0.1.13
   regenerator-runtime: ~0.13.3
@@ -15007,7 +15195,7 @@ specifiers:
   stylelint-config-recommended: ~2.2.0
   terser-webpack-plugin: ~1.4.1
   ts-loader: ~6.0.4
-  tslib: ~1.10.0
+  tslib: ^1.10.0
   typescript: ~3.5.3
   url-loader: ~2.1.0
   wdio-chromedriver-service: ^6.0.2
