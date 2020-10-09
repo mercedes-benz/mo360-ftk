@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2020.10.09
+
+Fix allowing projects to upgrade 'react'
+
 ## [0.2.0] - 2020.10.08
 
 Bump
