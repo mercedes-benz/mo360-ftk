@@ -8,6 +8,7 @@ const defaultExposedModules = {
   '@material-ui/core': 'ExposedMaterialUiCore',
   '@material-ui/lab': 'ExposedMaterialUiLab',
   '@material-ui/icons': 'ExposedMaterialUIIcons',
+  '@material-ui/styles': 'ExposedMaterialUIStyles',
   react: 'ExposedReact',
   'react-dom': 'ExposedReactDom',
   inversify: 'ExposedInversify',
@@ -26,21 +27,25 @@ function addExposedModules(rulesArray, moduleMap) {
   Object.entries(moduleMap).map(([moduleName, exposedName]) => {
     if (moduleName.startsWith('@material-ui')) {
       // material-ui exceptions as they for some reason do not get parsed correctly
-      // TODO: After daimler-ui is released, re-check this
       if (moduleName === '@material-ui/core') {
         rulesArray.push({
-          test: /@material-ui\/core\/*./,
+          test: /@material-ui[\/\\]core[\/\\]*./,
           loader: 'expose-loader?ExposedMaterialUiCore',
         });
       } else if (moduleName === '@material-ui/lab') {
         rulesArray.push({
-          test: /@material-ui\/lab\/*./,
+          test: /@material-ui[\/\\]lab[\/\\]*./,
           loader: 'expose-loader?ExposedMaterialUiLab',
         });
       } else if (moduleName === '@material-ui/icons') {
         rulesArray.push({
-          test: /@material-ui\/icons\/*./,
+          test: /@material-ui[\/\\]icons[\/\\]*./,
           loader: 'expose-loader?ExposedMaterialUIIcons',
+        });
+      } else if (moduleName === '@material-ui/styles') {
+        rulesArray.push({
+          test: /@material-ui[\/\\]styles[\/\\]*./,
+          loader: 'expose-loader?ExposedMaterialUIStyles',
         });
       }
     } else {
