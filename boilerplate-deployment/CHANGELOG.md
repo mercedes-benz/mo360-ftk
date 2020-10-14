@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2020.10.14
+
+- Expose @material-ui/styles
+- Fix exposing on windows
+
 ## [0.3.0] - 2020.10.09
 
 Fix allowing projects to upgrade 'react'
