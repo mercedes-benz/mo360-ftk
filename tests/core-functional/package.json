@@ -1,7 +1,7 @@
 {
   "name": "@daimler/ftk-core-tests-functional",
   "version": "0.3.1",
-  "description": "Daimler MO360 Frontend Toolkit | Core Tests (Functional) - internal use only",
+  "description": "Mercedes-Benz MO360 Frontend Toolkit | Core Tests (Functional) - internal use only",
   "license": "MIT",
   "author": "Daimler TSS GmbH",
   "scripts": {
