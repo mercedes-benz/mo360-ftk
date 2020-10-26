@@ -1,8 +1,8 @@
 ![Banner](./docs/assets/banner.png)
 
-# Daimler MO360 Frontend Toolkit (FTK)
+# Mercedes-Benz MO360 Frontend Toolkit (FTK)
 
-If you want to learn more about the Daimler MO360 FTK, check out our [documentation](./docs/README.md).
+If you want to learn more about the Mercedes-Benz MO360 FTK, check out our [documentation](./docs/README.md).
 
 ___
 
