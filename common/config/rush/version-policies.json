@@ -13,14 +13,14 @@
     "definitionName": "lockStepVersion",
     "policyName": "public",
     "nextBump": "patch",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "mainProject": "@daimler/ftk-core"
   },
   {
     "definitionName": "lockStepVersion",
     "policyName": "private",
     "nextBump": "patch",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "mainProject": "@daimler/ftk-core"
   }
   // {

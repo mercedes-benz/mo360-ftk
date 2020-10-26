@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.2] - 2020.10.26
+
+Changed description
+
 ## [0.3.1] - 2020.10.14
 
 Bump
