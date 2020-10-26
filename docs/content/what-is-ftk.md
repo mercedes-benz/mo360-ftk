@@ -1,4 +1,4 @@
-# What is the Daimler MO360 Frontend Toolkit
+# What is the Mercedes-Benz MO360 Frontend Toolkit
 
 - [Brief overview](#brief-overview)
 - [Big picture](#big-picture)
@@ -14,7 +14,7 @@
 
 ## Brief overview
 
-The Daimler MO360 Frontend Toolkit (FTK) is a toolkit for creating modern Web-Applications.
+The Mercedes-Benz MO360 Frontend Toolkit (FTK) is a toolkit for creating modern Web-Applications.
 
 To be more specific: for Single-Page-Applications (SPA) based on [React and TypeScript](../faq/why-react-and-typescript.md).
 It contains various tools and libraries for [common use cases and problems](#common-use-cases-and-problems) and provides several built-in features for better [developer experience](#developer-experience).
