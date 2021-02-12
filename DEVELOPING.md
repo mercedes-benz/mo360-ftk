@@ -46,6 +46,38 @@ The folders and their content briefly explained:
 
 **Happy coding!**
 
+### Core Development
+
+In order to develop more easy on the `core` with direct visiblity in a web project you have to link it.
+
+```bash
+# For example: we use boilerplate and core
+(
+    cd core
+    npm i
+    # Creates link for the core itself
+    npm link
+)
+(
+    cd boilerplate
+    npm i
+    # link the core from the step before
+    npm link @daimler/ftk-core
+)
+(
+    cd core
+    # Last step: link the used react version from your webapp. Otherwise we would have multiple react versions.
+    npm link ../boilerplate/node_modules/react
+)
+
+# Now you can start the core in watch to auto compile
+(cd core && npm run watch)
+# Hotloading will work in the webapp directly
+(cd boilerplate && npm run start)
+
+# Happy developing!
+```
+
 ## Package publishing on npm
 
 In addition to the npm publish we want to make sure that we have a corresponding GitHub release tag, an intact repository and a meaningful `CHANGELOG.md`.

@@ -24,7 +24,8 @@
     "build": "npm run compile",
     "prepack": "npm run build",
     "clean": "rimraf lib",
-    "compile": "tsc"
+    "compile": "tsc",
+    "watch": "tsc -w"
   },
   "dependencies": {
     "@formatjs/intl-relativetimeformat": "2.8.0",
@@ -39,8 +40,10 @@
   },
   "devDependencies": {
     "@types/react": "~16.9.0",
+    "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "rimraf": "~3.0.2",
+    "tslib": "^1.10.0",
     "typescript": "~3.5.3"
   },
   "peerDependencies": {
