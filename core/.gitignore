@@ -1,0 +1,3 @@
+# Handled by rush
+*.lock
+package-lock.json
