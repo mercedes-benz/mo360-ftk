@@ -28,34 +28,40 @@ export default class ComponentLoader {
         const scriptLoader = new ScriptLoader(options.url);
 
         return new Promise<ISwidget>((resolve, reject) => {
-            scriptLoader
-                .loadScript()
-                .then(() => {
-                    const swidget: ISwidget = get(window, `${options.name}.default`, null);
+            const alreadyLoadedSwidget: ISwidget = get(window, `${options.name}.default`, null);
 
-                    if (swidget && !swidget.metadata) {
-                        reject(
-                            new Error(
-                                `Swidget metadata not found. Are you trying to load a swidget without metadata?`,
-                            ),
-                        );
-                    } else if (swidget && swidget.metadata) {
-                        resolve(swidget);
-                    } else {
-                        reject(new Error(`Swidget ComponentLoader: can't load swidget with name ${options.name}.`));
-                    }
-                })
-                .catch((errLog: { event: Event | string; error?: Error }) => {
-                    let errorMessage = `Swidget ComponentLoader: can't load swidget with url ${options.url}.`;
+            if (alreadyLoadedSwidget && alreadyLoadedSwidget.metadata) {
+                resolve(alreadyLoadedSwidget);
+            } else {
+                scriptLoader
+                    .loadScript()
+                    .then(() => {
+                        const swidget: ISwidget = get(window, `${options.name}.default`, null);
 
-                    if (errLog.error) {
-                        errorMessage = `Swidget ComponentLoader: can't load swidget with name ${
-                            options.name
-                        }. \n Error: ${errLog.error.message}`;
-                    }
+                        if (swidget && !swidget.metadata) {
+                            reject(
+                                new Error(
+                                    `Swidget metadata not found. Are you trying to load a swidget without metadata?`,
+                                ),
+                            );
+                        } else if (swidget && swidget.metadata) {
+                            resolve(swidget);
+                        } else {
+                            reject(new Error(`Swidget ComponentLoader: can't load swidget with name ${options.name}.`));
+                        }
+                    })
+                    .catch((errLog: { event: Event | string; error?: Error }) => {
+                        let errorMessage = `Swidget ComponentLoader: can't load swidget with url ${options.url}.`;
 
-                    reject(new Error(errorMessage));
-                });
+                        if (errLog.error) {
+                            errorMessage = `Swidget ComponentLoader: can't load swidget with name ${
+                                options.name
+                            }. \n Error: ${errLog.error.message}`;
+                        }
+
+                        reject(new Error(errorMessage));
+                    });
+            }
         });
     }
 }
