@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { IDiContainer, IRouteConfig, ISwidget, Route, serviceIds, App, TranslationProvider } from '@daimler/ftk-core';
 import * as React from 'react';
 import TranslationsI18n from './globals/i18n/Translations';

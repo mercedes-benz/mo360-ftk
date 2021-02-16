@@ -2,7 +2,8 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 import * as React from 'react';
-import { AppBar, Typography, Toolbar, Grid, Link, makeStyles } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Grid, Link } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import LanguageSwitch from './LanguageSwitch';
 import { useRouter } from '@daimler/ftk-core';
 

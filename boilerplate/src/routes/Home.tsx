@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import { Theme, Container, Typography, Box, Button, makeStyles } from '@material-ui/core';
+import { Container, Typography, Box, Button } from '@material-ui/core';
+import { Theme, makeStyles } from '@material-ui/core/styles';
 import { useI18n, useConfig, useRouter } from '@daimler/ftk-core';
 import * as React from 'react';
 import Logo from '../components/Logo';

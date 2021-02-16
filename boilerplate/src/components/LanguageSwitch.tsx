@@ -2,7 +2,8 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 import * as React from 'react';
-import { Typography, Button, makeStyles } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import LanguageIcon from '@material-ui/icons/Language';
 import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
 import { useI18n } from '@daimler/ftk-core';

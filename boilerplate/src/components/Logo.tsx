@@ -2,7 +2,7 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 import * as React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import imgLogo from '../assets/images/logo.png';
 
 const useStyles = makeStyles(({ spacing }) => ({

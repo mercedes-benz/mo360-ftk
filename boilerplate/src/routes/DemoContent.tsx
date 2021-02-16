@@ -11,9 +11,6 @@
  */
 
 import {
-  createStyles,
-  withStyles,
-  WithStyles,
   Container,
   Typography,
   Box,
@@ -24,6 +21,7 @@ import {
   CardActionArea,
   Grid,
 } from '@material-ui/core';
+import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 import Logo from '../assets/images/logo.png';
