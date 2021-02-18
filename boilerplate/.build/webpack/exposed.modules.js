@@ -19,6 +19,15 @@ const defaultExposedModules = {
 };
 
 /**
+ * Quickfix for DEV-Mode
+ * As react-dom is resolved by the hot-loader,
+ * it will not be exposed by the hostapp and should therefore be excluded from the exposed-list.
+ */
+if (process.env.build === 'dev') {
+  delete(defaultExposedModules['react-dom']);
+}
+
+/**
  *
  * Adds our list of exposed modules to a webpack { rules: [] } section to mark the to be loaded via
  * expose-loader.
