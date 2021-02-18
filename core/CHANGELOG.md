@@ -1,27 +1,51 @@
-# Changelog
+# Change Log - @daimler/ftk-core
 
-All notable changes to this project will be documented in this file.
+This log was last generated on Thu, 18 Feb 2021 14:38:23 GMT and should not be manually modified.
 
-## [0.3.2] - 2020.10.26
+## 0.3.3
+Thu, 18 Feb 2021 14:38:23 GMT
 
-Changed description
+*Version update only*
 
-## [0.3.1] - 2020.10.14
+## 0.3.2
+2020.10.26
 
-Bump
+### Updates
 
-## [0.3.0] - 2020.10.09
+- Changed description
 
-Fix allowing projects to upgrade 'react'
+## 0.3.1
+2020.10.14
 
-## [0.2.0] - 2020.10.08
+### Updates
 
-Bump
+- Bump
 
-## [0.1.1] - 2020.10.01
+## 0.3.0
+2020.10.09
 
-Add missing README.md
+### Updates
 
-## [0.1.0]
+- Fix allowing projects to upgrade 'react'
 
-Initial publish
+## 0.2.0
+2020.10.08
+
+### Updates
+
+- Bump
+
+## 0.1.1
+2020-10-01
+
+### Updates
+
+- Add missing README.md
+
+## 0.1.0
+2020-10-01
+
+### Updates
+
+- Initial publish
+

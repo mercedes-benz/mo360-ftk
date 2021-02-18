@@ -1,0 +1,83 @@
+{
+  "name": "@daimler/ftk-core",
+  "entries": [
+    {
+      "version": "0.3.3",
+      "tag": "@daimler/ftk-core_v0.3.3",
+      "date": "Thu, 18 Feb 2021 14:38:23 GMT",
+      "comments": {}
+    },
+    {
+      "version": "0.3.2",
+      "tag": "@daimler/ftk-core_v0.3.2",
+      "date": "2020.10.26",
+      "comments": {
+        "none": [
+          {
+            "comment": "Changed description"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.1",
+      "tag": "@daimler/ftk-core_v0.3.1",
+      "date": "2020.10.14",
+      "comments": {
+        "none": [
+          {
+            "comment": "Bump"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.0",
+      "tag": "@daimler/ftk-core_v0.3.0",
+      "date": "2020.10.09",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fix allowing projects to upgrade 'react'"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.2.0",
+      "tag": "@daimler/ftk-core_v0.2.0",
+      "date": "2020.10.08",
+      "comments": {
+        "none": [
+          {
+            "comment": "Bump"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.1.1",
+      "tag": "@daimler/ftk-core_v0.1.1",
+      "date": "2020-10-01",
+      "comments": {
+        "none": [
+          {
+            "comment": "Add missing README.md"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.1.0",
+      "tag": "@daimler/ftk-core_v0.1.0",
+      "date": "2020-10-01",
+      "comments": {
+        "none": [
+          {
+            "comment": "Initial publish"
+          }
+        ]
+      }
+    }
+  ]
+}
