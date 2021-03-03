@@ -1,0 +1,36 @@
+name: Release packages
+
+env:
+  CUSTOM_REG: ${{ secrets.CUSTOM_REG }}
+  CUSTOM_AUTH_TOKEN: ${{ secrets.CUSTOM_AUTH_TOKEN }}
+  NPMJS_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js lts/erbium
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install Rush
+      run: npm install --global @microsoft/rush
+    - name: Check state
+      run: |
+        rush clean
+        rush purge
+        rush install
+        rush build
+        rush test
+    - name: Release @npmjs
+      run: |
+        rush publish -p --version-policy public --include-all -n ${NPMJS_AUTH_TOKEN}
+    - name: Release @custom registry
+      run: |
+        rush publish -p --version-policy public --include-all -r ${CUSTOM_REG} -n ${CUSTOM_AUTH_TOKEN}
