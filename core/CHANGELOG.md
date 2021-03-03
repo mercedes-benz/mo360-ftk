@@ -1,6 +1,11 @@
 # Change Log - @daimler/ftk-core
 
-This log was last generated on Thu, 18 Feb 2021 14:38:23 GMT and should not be manually modified.
+This log was last generated on Wed, 03 Mar 2021 11:20:02 GMT and should not be manually modified.
+
+## 0.3.4
+Wed, 03 Mar 2021 11:20:02 GMT
+
+*Version update only*
 
 ## 0.3.3
 Thu, 18 Feb 2021 14:38:23 GMT
