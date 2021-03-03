@@ -2,6 +2,18 @@
   "name": "@daimler/ftk-core",
   "entries": [
     {
+      "version": "0.3.4",
+      "tag": "@daimler/ftk-core_v0.3.4",
+      "date": "03.03.2021",
+      "comments": {
+        "none": [
+          {
+            "comment": "Change peer dependency of react to include `^17.0.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.3",
       "tag": "@daimler/ftk-core_v0.3.3",
       "date": "Thu, 18 Feb 2021 14:38:23 GMT",
