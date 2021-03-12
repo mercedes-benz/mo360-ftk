@@ -10,6 +10,7 @@ import { InterconnectionService } from '../interconnection/InterconnectionServic
 import IRouteConfig from '../router/component/interface/IRouteConfig';
 import DefaultRouterStrategy from '../router/lib/urlFormatStrategy/DefaultRouterStrategy';
 import serviceIds from './serviceIds';
+import {DefaultErrorHandlerStrategy} from '../errorHandler/lib/DefaultErrorHandlerStrategy';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -50,6 +51,9 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
   const url: URL = new URL(window.location.href) as any;
   container.bind(serviceIds.currentSwidget.url).toConstantValue(url);
   container.bind(serviceIds.currentSwidget.assetResolver).toConstantValue(getDefaultAssetResolver(url));
+
+  /** error-handler */
+  container.bind(serviceIds.errorHandlerStrategy).toConstantValue(new DefaultErrorHandlerStrategy());
 }
 
 registerDefaultDependencies.displayName = 'registerDefaultDependencies';
