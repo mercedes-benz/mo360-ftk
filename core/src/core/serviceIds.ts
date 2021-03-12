@@ -12,6 +12,7 @@ const serviceIds = {
   translations: 'ftk.core.translations',
   routerUrlFormatStrategy: 'ftk.core.router.urlFormatStrategy',
   routes: 'ftk.core.routes',
+  errorHandlerStrategy: 'ftk.core.errorHandler.strategy',
 };
 
 export default serviceIds;
