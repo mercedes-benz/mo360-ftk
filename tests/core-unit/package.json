@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@daimler/ftk-core": "0.3.4",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "path": "0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
