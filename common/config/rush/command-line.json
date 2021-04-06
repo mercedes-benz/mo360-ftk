@@ -46,7 +46,8 @@
       "name": "test",
       "summary": "Run the 'npm test' command on all projects.",
       "enableParallelism": false,
-      "ignoreMissingScript": true
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": true
     }
 
     // {

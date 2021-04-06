@@ -1,6 +1,6 @@
 {
   "name": "@daimler/ftk-core-tests-unit",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Mercedes-Benz MO360 Frontend Toolkit | Core Tests (Unit) - internal use only",
   "license": "MIT",
   "author": "Daimler TSS GmbH",
@@ -15,7 +15,7 @@
     "clean": "rimraf temp logs .nyc_output coverage"
   },
   "dependencies": {
-    "@daimler/ftk-core": "0.3.4",
+    "@daimler/ftk-core": "0.3.5",
     "lodash": "4.17.21",
     "path": "0.12.7",
     "react": "^16.9.0",

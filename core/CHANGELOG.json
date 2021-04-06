@@ -2,6 +2,12 @@
   "name": "@daimler/ftk-core",
   "entries": [
     {
+      "version": "0.3.5",
+      "tag": "@daimler/ftk-core_v0.3.5",
+      "date": "Tue, 06 Apr 2021 07:20:50 GMT",
+      "comments": {}
+    },
+    {
       "version": "0.3.4",
       "tag": "@daimler/ftk-core_v0.3.4",
       "date": "Wed, 03 Mar 2021 11:20:02 GMT",
