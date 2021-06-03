@@ -65,11 +65,13 @@ const devConfig = {
       eslint: true,
       watch: [path.resolve(process.cwd(), 'src')],
     }),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new friendlyErrorsWebpackPlugin(),
   ],
   devServer: devServerConfig,
+  optimization: {
+    moduleIds: 'named'
+  }
 };
 
 module.exports = merge(base, devConfig);

@@ -98,21 +98,23 @@ const base = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.png', '.svg', '.jpg', '.gif'],
+    fallback: {
+      fs: false,
+      net: false,
+      tls: false,
+      dns: false,
+    }
   },
   plugins: [
-    new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
+    new webpack.WatchIgnorePlugin({
+      paths: [/css\.d\.ts$/]
+    }),
     new webpack.DefinePlugin({
       __CONFIG__: process.env.config ? JSON.stringify(process.env.config) : JSON.stringify('default'),
       __DEV__: devMode,
       'process.env.NODE_ENV': devMode ? JSON.stringify('development') : JSON.stringify('production'),
     }),
   ],
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    dns: 'empty',
-  },
 };
 
 // copy public files

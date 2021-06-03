@@ -3,8 +3,8 @@
 
 const merge = require('webpack-merge');
 
-module.exports = function (env) {
-  process.env = env;
+module.exports = function () {
+  const env = process.env;
   let config = require(`./.build/webpack/${env.build}.js`);
 
   if (env.swidget === 'true') {

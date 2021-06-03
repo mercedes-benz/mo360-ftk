@@ -19,7 +19,7 @@
   "scripts": {
     "start": "webpack-dev-server --env.build=dev",
     "start:swidget": "webpack-dev-server --port 7070 --env.build=dev --env.swidget=true",
-    "start:host": "webpack-dev-server --env.build=dev --env.exposed=true",
+    "start:host": "build=dev webpack serve",
     "build": "npm run clean && webpack --env.build=prod",
     "build:ci": "npm run clean && webpack --env.build=prod --env.verbose=true",
     "build:host": "npm run clean && webpack --env.build=prod --env.exposed=true",
@@ -125,8 +125,8 @@
     "ts-loader": "~6.0.4",
     "typescript": "~3.5.3",
     "url-loader": "~2.1.0",
-    "webpack": "~4.39.3",
-    "webpack-cli": "~3.3.7",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
     "webpack-dev-server": "~3.11.0",
     "webpack-merge": "~4.2.2"
   }
