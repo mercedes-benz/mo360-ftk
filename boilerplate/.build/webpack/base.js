@@ -9,11 +9,7 @@ const path = require('path'),
   webpack = require('webpack'),
   miniCssExtractPlugin = require('mini-css-extract-plugin'),
   copyWebpackPlugin = require('copy-webpack-plugin'),
-  duplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin'),
   devMode = process.env.build === 'dev',
-  swidgetMode = process.env.swidget === 'true',
-  exposedMode = process.env.exposed === 'true',
-  devOrSwidgetMode = devMode || swidgetMode,
   packageName = camelCase(packageJson.name.replace(/@/, '-').replace(/\//, '-')),
   version = packageJson.version.toLowerCase().trim(),
   title = packageJson.config.title || packageName;
@@ -58,7 +54,7 @@ const base = {
         test: /\.(css|scss)$/,
         use: [
           {
-            loader: devOrSwidgetMode ? 'style-loader' : miniCssExtractPlugin.loader,
+            loader: devMode ? 'style-loader' : miniCssExtractPlugin.loader,
           },
           {
             loader: 'css-modules-typescript-loader',
@@ -86,7 +82,7 @@ const base = {
         test: /\.(css|scss)$/,
         use: [
           {
-            loader: swidgetMode ? 'style-loader' : miniCssExtractPlugin.loader,
+            loader: miniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
@@ -114,46 +110,6 @@ const base = {
       __DEV__: devMode,
       'process.env.NODE_ENV': devMode ? JSON.stringify('development') : JSON.stringify('production'),
     }),
-  ],
-};
-
-// copy public files
-const pathPublic = path.join(process.cwd(), 'public');
-function publicFolderHasFiles() {
-  if (fs.existsSync(pathPublic)) {
-    try {
-      const listFiles = fs.readdirSync(pathPublic);
-      for (let i = 0; i < listFiles.length; i += 1) {
-        if (listFiles[i] !== 'README.md') {
-          return true;
-        }
-      }
-    } catch (_) {}
-  }
-  return false;
-}
-if (publicFolderHasFiles()) {
-  base.plugins.push(
-    new copyWebpackPlugin({
-      patterns: [
-        {
-          from: '**/*',
-          context: pathPublic,
-          globOptions: { ignore: ['**/README.md'] },
-        },
-      ],
-    }),
-  );
-}
-
-// only for prod and swidget mode
-if (!devMode) {
-  base.plugins.push(new webpack.HashedModuleIdsPlugin(), new duplicatePackageCheckerPlugin());
-}
-
-// only for dev and prod not for swidget mode
-if (!swidgetMode) {
-  base.plugins.push(
     new htmlWebpackPlugin({
       prodMode: !devMode,
       inject: devMode,
@@ -194,14 +150,37 @@ if (!swidgetMode) {
     //async await support in es6
     new webpack.ProvidePlugin({
       regeneratorRuntime: 'regenerator-runtime/runtime',
+    })
+  ],
+};
+
+// copy public files
+const pathPublic = path.join(process.cwd(), 'public');
+function publicFolderHasFiles() {
+  if (fs.existsSync(pathPublic)) {
+    try {
+      const listFiles = fs.readdirSync(pathPublic);
+      for (let i = 0; i < listFiles.length; i += 1) {
+        if (listFiles[i] !== 'README.md') {
+          return true;
+        }
+      }
+    } catch (_) {}
+  }
+  return false;
+}
+if (publicFolderHasFiles()) {
+  base.plugins.push(
+    new copyWebpackPlugin({
+      patterns: [
+        {
+          from: '**/*',
+          context: pathPublic,
+          globOptions: { ignore: ['**/README.md'] },
+        },
+      ],
     }),
   );
-}
-
-if (exposedMode) {
-  const { defaultExposedModules, addExposedModules } = require('./exposed.modules');
-  const customExposedModules = require('../exposed.modules.custom');
-  addExposedModules(base.module.rules, { ...defaultExposedModules, ...customExposedModules });
 }
 
 module.exports = base;

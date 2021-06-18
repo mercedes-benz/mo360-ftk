@@ -17,13 +17,9 @@
     "publicPath": "./"
   },
   "scripts": {
-    "start": "webpack-dev-server --env.build=dev",
-    "start:swidget": "webpack-dev-server --port 7070 --env.build=dev --env.swidget=true",
-    "start:host": "build=dev webpack serve",
-    "build": "npm run clean && webpack --env.build=prod",
-    "build:ci": "npm run clean && webpack --env.build=prod --env.verbose=true",
-    "build:host": "npm run clean && webpack --env.build=prod --env.exposed=true",
-    "build:swidget": "npm run clean && webpack --env.build=prod --env.swidget=true",
+    "start": "build=dev webpack serve",
+    "build": "npm run clean && build=prod webpack",
+    "build:ci": "npm run clean && build=prod verbose=true webpack",
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "lint:staged": "lint-staged",
     "lint:eslint": "eslint --ext ts,tsx src",
