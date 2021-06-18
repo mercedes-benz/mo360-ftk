@@ -133,8 +133,8 @@ const base = {
       ],
       chunksSortMode: function (chunk1, chunk2) {
         var orders = ['polyfill', 'app'];
-        var order1 = orders.indexOf(chunk1.names[0]);
-        var order2 = orders.indexOf(chunk2.names[0]);
+        var order1 = orders.indexOf(typeof chunk1 === 'string' ? chunk1 : chunk1.names[0]);
+        var order2 = orders.indexOf(typeof chunk2 === 'string' ? chunk2 : chunk2.names[0]);
         if (order1 > order2) {
           return 1;
         } else if (order1 < order2) {
