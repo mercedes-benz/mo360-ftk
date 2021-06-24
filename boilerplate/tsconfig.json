@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "jsx": "react",
     "lib": ["DOM", "ES2019"],
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noImplicitAny": true,
