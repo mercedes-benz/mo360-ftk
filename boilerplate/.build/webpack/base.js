@@ -21,7 +21,7 @@ const base = {
   },
   output: {
     path: path.resolve(__dirname, '../../dist/app'),
-    filename: devMode ? 'swidget.js' : `${packageName}_${version}_[name].js`,
+    filename: devMode ? 'app.js' : `${packageName}_${version}_[name].js`,
   },
   module: {
     rules: [
