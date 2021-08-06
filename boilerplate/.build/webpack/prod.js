@@ -22,9 +22,6 @@ const prodConfig = {
   name: 'ProdConfig',
   mode: 'production',
   devtool: sourceMapGeneration,
-  output: {
-    publicPath: packageJson.config.publicPath || '',
-  },
   module: {
     rules: [
       {

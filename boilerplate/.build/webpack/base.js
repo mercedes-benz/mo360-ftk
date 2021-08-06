@@ -26,6 +26,13 @@ const base = {
   module: {
     rules: [
       {
+        test: /bootstrap\.tsx$/,
+        loader: 'bundle-loader',
+        options: {
+          lazy: true,
+        },
+      },
+      {
         test: /\.(ttf|eot|woff2|woff|svg|otf)/,
         use: [
           {

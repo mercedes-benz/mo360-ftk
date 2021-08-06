@@ -18,8 +18,8 @@
   },
   "scripts": {
     "start": "build=dev webpack serve",
-    "build": "npm run clean && build=prod webpack",
-    "build:ci": "npm run clean && build=prod verbose=true webpack",
+    "build": "npm run clean && build=prod webpack --mode production",
+    "build:ci": "npm run clean && build=prod verbose=true webpack --mode production",
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "lint:staged": "lint-staged",
     "lint:eslint": "eslint --ext ts,tsx src",
@@ -59,9 +59,7 @@
     "@ungap/url-search-params": "~0.2.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-hot-loader": "^4.12.12",
-    "regenerator-runtime": "~0.13.3",
-    "tslib": "^1.10.0"
+    "regenerator-runtime": "~0.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -75,6 +73,7 @@
     "@typescript-eslint/eslint-plugin": "~2.0.0",
     "@typescript-eslint/parser": "~2.0.0",
     "babel-loader": "^8.0.0",
+    "bundle-loader": "^0.5.6",
     "camelcase": "^6.2.0",
     "copy-webpack-plugin": "~6.0.3",
     "cross-env": "~7.0.2",
@@ -111,6 +110,7 @@
     "postcss-sorting": "~5.0.1",
     "postcss-unprefix": "~2.1.4",
     "prettier": "^2.1.1",
+    "react-hot-loader": "^4.12.12",
     "rimraf": "~3.0.2",
     "simple-progress-webpack-plugin": "~1.1.2",
     "style-loader": "~1.0.0",
@@ -119,11 +119,12 @@
     "stylelint-config-recommended": "~2.2.0",
     "terser-webpack-plugin": "~1.4.1",
     "ts-loader": "~6.0.4",
+    "tslib": "^1.10.0",
     "typescript": "~3.5.3",
     "url-loader": "~2.1.0",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "~3.11.0",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "~4.2.2"
   }
 }
