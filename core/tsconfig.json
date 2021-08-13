@@ -17,6 +17,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "typings.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
   ]
