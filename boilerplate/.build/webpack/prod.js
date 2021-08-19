@@ -15,8 +15,8 @@ const base = require('./base'),
       : process.env.sourceMap === 'false'
       ? false
       : process.env.sourceMap
-      ? process.env.sourceMap
-      : false;
+        ? process.env.sourceMap
+        : false;
 
 const prodConfig = {
   name: 'ProdConfig',
@@ -42,8 +42,6 @@ const prodConfig = {
     new SimpleProgressWebpackPlugin({
       format: process.env.verbose === 'true' ? 'expanded' : 'compact',
     }),
-    /*
-    // @TODO fix "TypeError: Cannot read property 'assets' of undefined" in favicons-webpack-plugin/src/compiler.js:69
     new faviconsWebpackPlugin({
       logo: packageJson.config.AppIcon,
       prefix: (packageJson.config.publicPath || '') + 'webapp/',
@@ -52,7 +50,6 @@ const prodConfig = {
         start_url: '../',
       },
     }),
-    */
   ],
   optimization: {
     minimizer: [
@@ -67,7 +64,6 @@ const prodConfig = {
       }),
       new optimizeCSSAssetsPlugin({}),
     ],
-    moduleIds: 'deterministic'
   },
   stats: process.env.verbose === 'true' ? 'normal' : 'errors-only',
 };

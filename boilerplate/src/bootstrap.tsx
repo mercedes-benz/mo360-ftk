@@ -12,7 +12,7 @@ import MyApp from './App';
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
-// @TODO fix me global.URLSearchParams = require('@ungap/url-search-params/cjs');
+global.URLSearchParams = require('@ungap/url-search-params');
 /** End of polyfill */
 
 const app = <MyApp />;
