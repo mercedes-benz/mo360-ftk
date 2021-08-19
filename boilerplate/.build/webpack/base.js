@@ -118,8 +118,6 @@ const base = {
       'process.env.NODE_ENV': devMode ? JSON.stringify('development') : JSON.stringify('production'),
     }),
     new htmlWebpackPlugin({
-      prodMode: !devMode,
-      inject: devMode,
       lang: 'en',
       title: (devMode ? 'DEV | ' : '') + title,
       template: path.join(__dirname, '..', '..', 'src', 'assets', 'templates', 'default.ejs'),
