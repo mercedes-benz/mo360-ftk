@@ -5,7 +5,6 @@ const base = require('./base'),
   merge = require('webpack-merge'),
   webpack = require('webpack'),
   forkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'),
-  friendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
   path = require('path'),
   packageJson = require(path.resolve(process.cwd(), 'package.json'));
 
@@ -66,7 +65,6 @@ const devConfig = {
       watch: [path.resolve(process.cwd(), 'src')],
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new friendlyErrorsWebpackPlugin(),
   ],
   devServer: devServerConfig,
   optimization: {

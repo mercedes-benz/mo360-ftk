@@ -6,7 +6,7 @@ const base = require('./base'),
   path = require('path'),
   faviconsWebpackPlugin = require('favicons-webpack-plugin'),
   terserPlugin = require('terser-webpack-plugin'),
-  optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+  cssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
   packageJson = require(path.resolve(process.cwd(), 'package.json')),
   SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin'),
   sourceMapGeneration =
@@ -55,14 +55,12 @@ const prodConfig = {
     minimizer: [
       new terserPlugin({
         extractComments: true,
-        cache: true,
         parallel: true,
-        sourceMap: true,
         terserOptions: {
           safari10: true,
         },
       }),
-      new optimizeCSSAssetsPlugin({}),
+      new cssMinimizerPlugin(),
     ],
   },
   stats: process.env.verbose === 'true' ? 'normal' : 'errors-only',
