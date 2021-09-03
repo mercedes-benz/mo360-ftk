@@ -9,6 +9,7 @@ import inject from '../../di/hoc/inject';
 import { ISwidget } from '../ISwidget';
 import { getDefaultAssetResolver } from '../lib/assetResolver';
 import ComponentLoader from '../lib/ComponentLoader';
+import withInject from '../../di/hoc/withInject';
 
 export interface DeprecatedSwidgetLoaderProps {
   name: string;
@@ -82,4 +83,4 @@ class DeprecatedSwidgetLoader extends React.Component<DeprecatedSwidgetLoaderPro
   };
 }
 
-export default DeprecatedSwidgetLoader;
+export default withInject(DeprecatedSwidgetLoader);
