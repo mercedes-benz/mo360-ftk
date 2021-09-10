@@ -13,7 +13,7 @@ export interface WmfSwidgetLoaderProps {
   scope: string;
   module: string;
   props?: object;
-  uniqueId?: string;
+  uniqueId: string;
 }
 
 /** @see https://github.com/webpack/webpack/issues/11033 */

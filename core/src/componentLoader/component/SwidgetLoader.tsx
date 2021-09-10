@@ -13,7 +13,7 @@ export interface SwidgetLoaderProps {
   scope?: string;
   module?: string;
   props?: object;
-  uniqueId?: string;
+  uniqueId: string;
   deprecated?: boolean;
 }
 

@@ -17,7 +17,7 @@ export interface DeprecatedSwidgetLoaderProps {
   loadingPlaceholder?: React.ReactNode;
   url: string;
   props?: object;
-  uniqueId?: string;
+  uniqueId: string;
 }
 
 export interface IState {
