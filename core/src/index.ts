@@ -32,7 +32,7 @@ export { default as RouterProvider } from './router/component/RouterProvider';
 export { default as Link } from './router/component/Link';
 export { default as RouterServiceType } from './router/lib/RouterService.type';
 export { default as RouteConfigType } from './router/lib/RouteConfig.type';
-export { default as DefaultSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Default';
+export { default as PathSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Path';
 export { default as QueryStringSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/QueryString';
 export { default as HashbangSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Hashbang';
 

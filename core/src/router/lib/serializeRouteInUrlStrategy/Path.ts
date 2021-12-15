@@ -1,7 +1,7 @@
 import StrategyType from './Strategy.type';
 import RouteQueryType from '../RouteQuery.type';
 
-class Default implements StrategyType {
+class Path implements StrategyType {
   protected basePathSegments: string[];
 
   constructor(basePath: string = '/') {
@@ -44,4 +44,4 @@ class Default implements StrategyType {
   }
 }
 
-export default Default
+export default Path

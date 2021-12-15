@@ -9,7 +9,7 @@ import { EventEmitter } from '../interconnection/EventEmitter';
 import { InterconnectionService } from '../interconnection/InterconnectionService';
 import serviceIds from './serviceIds';
 import RouteConfigType from '../router/lib/RouteConfig.type';
-import Default from '../router/lib/serializeRouteInUrlStrategy/Default';
+import Path from '../router/lib/serializeRouteInUrlStrategy/Path';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -31,7 +31,7 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
   ]);
 
   container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toDynamicValue(() => {
-    return new Default();
+    return new Path();
   });
 
   /** start with empty translations */
