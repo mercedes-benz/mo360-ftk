@@ -30,9 +30,9 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
     }
   ]);
 
-  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toDynamicValue(() => {
-    return new Path();
-  });
+  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toConstantValue(
+    new Path()
+  );
 
   /** start with empty translations */
   container.bind<ITranslationMap>(serviceIds.translations).toConstantValue({});
