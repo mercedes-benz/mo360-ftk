@@ -12,13 +12,19 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "jsx": "react",
-    "lib": ["dom", "es2015" ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2019"
+    ],
     "importHelpers": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types/"]
   },
   "include": [
     "typings.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-  ]
+  ],
+  "exclude": ["node_modules"]
 }

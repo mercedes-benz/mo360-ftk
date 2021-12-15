@@ -28,10 +28,13 @@ export { default as ITranslation } from './i18n/lib/interface/ITranslation';
 export { TranslationProvider } from './i18n/component/TranslationProvider';
 
 // Router
-export { default as Route } from './router/component/Route';
 export { default as RouterProvider } from './router/component/RouterProvider';
-export { default as IRouteConfig } from './router/component/interface/IRouteConfig';
-export { RouterService } from './router/lib/RouterService';
+export { default as Link } from './router/component/Link';
+export { default as RouterServiceType } from './router/lib/RouterService.type';
+export { default as RouteConfigType } from './router/lib/RouteConfig.type';
+export { default as DefaultSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Default';
+export { default as QueryStringSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/QueryString';
+export { default as HashbangSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Hashbang';
 
 // DI
 export { default as BindToDi } from './di/component/BindToDi';

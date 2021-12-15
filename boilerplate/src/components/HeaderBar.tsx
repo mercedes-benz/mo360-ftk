@@ -41,7 +41,7 @@ export default function HeaderBar(props: HeaderBarProps) {
       <Toolbar>
         <Grid container>
           <Grid item xs={11} className={classes.headerLink}>
-            <Link classes={{ root: classes.headerLinkText }} underline="none" href={router.linkToHome()}>
+            <Link classes={{ root: classes.headerLinkText }} underline="none" href={router.linkTo('home')}>
               <Typography variant="h6" color="inherit">
                 {title}
               </Typography>

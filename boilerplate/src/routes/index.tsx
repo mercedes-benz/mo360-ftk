@@ -4,21 +4,21 @@
 import withLayout from '../decorators/withLayout';
 import DemoContent from './DemoContent';
 import Home from './Home';
-import { IRouteConfig } from '@daimler/ftk-core';
+import { RouteConfigType } from '@daimler/ftk-core';
 
 const LayoutHome = withLayout(Home);
 const LayoutDemoContent = withLayout(DemoContent);
 
-const routes: IRouteConfig[] = [
+const routes: RouteConfigType = [
   {
-    component: LayoutHome,
+    action: () => LayoutHome,
     name: 'home',
-    pattern: '/',
+    path: '/',
   },
   {
-    component: LayoutDemoContent,
+    action: () => LayoutDemoContent,
     name: 'demoContent',
-    pattern: '/demoContent',
+    path: '/demoContent',
   },
 ];
 

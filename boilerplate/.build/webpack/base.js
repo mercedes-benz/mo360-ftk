@@ -12,7 +12,8 @@ const path = require('path'),
   devMode = process.env.build === 'dev',
   packageName = camelCase(packageJson.name.replace(/@/, '-').replace(/\//, '-')),
   version = packageJson.version.toLowerCase().trim(),
-  title = packageJson.config.title || packageName;
+  title = packageJson.config.title || packageName,
+  publicPath = packageJson.config.publicPath;
 
 const base = {
   target: 'web',
@@ -118,6 +119,7 @@ const base = {
       'process.env.NODE_ENV': devMode ? JSON.stringify('development') : JSON.stringify('production'),
     }),
     new htmlWebpackPlugin({
+      baseUrl: publicPath,
       lang: 'en',
       title: (devMode ? 'DEV | ' : '') + title,
       template: path.join(__dirname, '..', '..', 'src', 'assets', 'templates', 'default.ejs'),

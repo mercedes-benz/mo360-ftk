@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { IDiContainer } from '..';
-import Route from '../router/component/Route';
+import RouterProvider from '../router/component/RouterProvider';
 import { App } from './App';
 
 /**
@@ -20,7 +20,7 @@ export default function kernel<TProps = {}>(
   const AppHoc = (props: TProps) => {
     return (
       <App name={name} init={mergeContainers} {...props}>
-        <Route />
+        <RouterProvider />
       </App>
     );
   };

@@ -1,8 +1,16 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
-import { IDiContainer, IRouteConfig, ISwidget, Route, serviceIds, App, TranslationProvider } from '@daimler/ftk-core';
+import { MuiThemeProvider, createTheme, CssBaseline } from '@material-ui/core';
+import {
+  IDiContainer,
+  ISwidget,
+  serviceIds,
+  App,
+  TranslationProvider,
+  RouteConfigType,
+  RouterProvider,
+} from '@daimler/ftk-core';
 import * as React from 'react';
 import TranslationsI18n from './globals/i18n/Translations';
 import routes from './routes';
@@ -12,11 +20,11 @@ const config = require(`../config/${__CONFIG__}`).default;
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 function init(container: IDiContainer): void {
-  container.bind<IRouteConfig[]>(serviceIds.routes).toConstantValue(routes);
+  container.bind<RouteConfigType>(serviceIds.routes).toConstantValue(routes);
 }
 
 // Create your custom MUI Theme here or import it
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: '#676767',
@@ -39,7 +47,7 @@ const swidget: ISwidget = (): JSX.Element => {
       <MuiThemeProvider theme={theme}>
         <CssBaseline>
           <TranslationProvider translations={TranslationsI18n}>
-            <Route />
+            <RouterProvider />
           </TranslationProvider>
         </CssBaseline>
       </MuiThemeProvider>

@@ -9,7 +9,8 @@ import { diContext } from '../di/lib/diContext';
 import { ErrorHandler } from '../errorHandler/lib/ErrorHandler';
 import { I18nService } from '../i18n/lib/I18nService';
 import { InterconnectionService } from '../interconnection/InterconnectionService';
-import { RouterService } from '../router/lib/RouterService';
+import serviceIds from '../core/serviceIds';
+import RouterServiceType from '../router/lib/RouterService.type';
 
 export function useFromDi<T>(serviceId: string | symbol | interfaces.Newable<T>): T {
   const diContainer = React.useContext<IDiContainer>(diContext);
@@ -27,7 +28,7 @@ export const useDi: () => IDiContainer = () => React.useContext(diContext);
 export const useErrorHandler = () => useFromDi(ErrorHandler);
 export const useI18n = () => useFromDi(I18nService);
 export const useInterconnection = () => useFromDi(InterconnectionService);
-export const useRouter = () => useFromDi(RouterService);
+export const useRouter = () => useFromDi<RouterServiceType>(serviceIds.routerService);
 
 /**
  * Compat/shim for backwards compatibility when using Hooks API.

@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <base href="<%= htmlWebpackPlugin.options.baseUrl %>" />
     <% if (htmlWebpackPlugin.options.prodMode) { %>
       <%= htmlWebpackPlugin.tags.headTags %>
       <style>

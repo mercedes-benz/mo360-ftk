@@ -30,12 +30,14 @@
     "@formatjs/intl-relativetimeformat": "2.8.0",
     "@types/lodash": "4.14.149",
     "eventemitter3": "4.0.0",
+    "history": "5.1.0",
     "intl-pluralrules": "1.0.3",
     "inversify": "5.0.1",
     "lodash": "4.17.20",
     "path-to-regexp": "3.1.0",
     "react-intl": "3.1.10",
-    "reflect-metadata": "0.1.13"
+    "reflect-metadata": "0.1.13",
+    "universal-router": "9.1.0"
   },
   "devDependencies": {
     "@types/react": "~16.9.0",

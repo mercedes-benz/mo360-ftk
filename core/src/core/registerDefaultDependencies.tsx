@@ -7,9 +7,9 @@ import { getDefaultAssetResolver } from '../componentLoader/lib/assetResolver';
 import ComponentLoader from '../componentLoader/lib/ComponentLoader';
 import { EventEmitter } from '../interconnection/EventEmitter';
 import { InterconnectionService } from '../interconnection/InterconnectionService';
-import IRouteConfig from '../router/component/interface/IRouteConfig';
-import DefaultRouterStrategy from '../router/lib/urlFormatStrategy/DefaultRouterStrategy';
 import serviceIds from './serviceIds';
+import RouteConfigType from '../router/lib/RouteConfig.type';
+import Default from '../router/lib/serializeRouteInUrlStrategy/Default';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -20,18 +20,18 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(ComponentLoader).toConstantValue(new ComponentLoader());
 
   /** router */
-  container.bind<IRouteConfig[]>(serviceIds.routes).toConstantValue([
+  container.bind<RouteConfigType>(serviceIds.routes).toConstantValue([
     {
-      /* eslint-disable react/display-name */
-      component: () => <h1>Hello World</h1>,
-      /* eslint-enable react/display-name */
       name: 'home',
-      pattern: '/',
-    },
+      path: '',
+      action: () => {
+        return () => <h1>Hello World</h1>
+      },
+    }
   ]);
 
-  container.bind(serviceIds.routerUrlFormatStrategy).toDynamicValue(() => {
-    return new DefaultRouterStrategy(null, null);
+  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toDynamicValue(() => {
+    return new Default();
   });
 
   /** start with empty translations */

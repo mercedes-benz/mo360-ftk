@@ -24,7 +24,7 @@ import {
   CardActionArea,
   Grid,
 } from '@material-ui/core';
-import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
+import { I18nService, inject, withInject, serviceIds, RouterServiceType } from '@daimler/ftk-core';
 import * as React from 'react';
 import Logo from '../assets/images/logo.png';
 import LogoGithub from '../assets/images/github-logo.png';
@@ -61,8 +61,8 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
   @inject()
   public i18n!: I18nService;
 
-  @inject()
-  public router!: RouterService;
+  @inject(serviceIds.routerService)
+  public router!: RouterServiceType;
 
   public render(): JSX.Element {
     const { classes } = this.props;
@@ -103,7 +103,7 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
           </Grid>
         </Grid>
         <Box m={3} className={classes.centered}>
-          <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
+          <Button variant="contained" color="secondary" onClick={() => this.router.navigateTo('home')}>
             {this.i18n.translateToString('BackToHome')}
           </Button>
         </Box>

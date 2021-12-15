@@ -10,7 +10,8 @@ const serviceIds = {
   },
   name: 'ftk.core.name',
   translations: 'ftk.core.translations',
-  routerUrlFormatStrategy: 'ftk.core.router.urlFormatStrategy',
+  routerSerializeRouteInUrlStrategy: 'ftk.core.router.serializeRouteInUrlStrategy',
+  routerService: 'ftk.core.router.service',
   routes: 'ftk.core.routes',
 };
 

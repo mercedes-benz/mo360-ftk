@@ -16,7 +16,9 @@ const devServerConfig = {
       : packageJson.config.devServer.host
     : 'localhost',
   port: packageJson.config.devServer.port || '8080',
-  historyApiFallback: true,
+  historyApiFallback: {
+    index: packageJson.config.devServer.publicPath || '/'
+  },
   https: packageJson.config.devServer.https || false,
   stats: process.env.verbose === 'true' ? 'normal' : 'errors-only',
   publicPath: packageJson.config.devServer.publicPath || '/',

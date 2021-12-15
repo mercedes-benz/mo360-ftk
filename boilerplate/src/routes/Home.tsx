@@ -38,7 +38,7 @@ const Home = () => {
       </Typography>
       <Typography className={classes.centered}>{i18n.translate('DescriptionStart')}</Typography>
       <Box m={3} className={classes.centered}>
-        <Button variant="contained" color="secondary" onClick={() => router.navigate(router.linkTo('demoContent'))}>
+        <Button variant="contained" color="secondary" onClick={() => router.navigateTo('demoContent')}>
           {i18n.translateToString('ReadMore')}
         </Button>
       </Box>
