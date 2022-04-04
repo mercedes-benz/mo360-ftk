@@ -17,7 +17,7 @@ const devServerConfig = {
     : 'localhost',
   port: packageJson.config.devServer.port || '8080',
   historyApiFallback: {
-    index: packageJson.config.devServer.publicPath || '/'
+    index: packageJson.config.devServer.publicPath || '/',
   },
   https: packageJson.config.devServer.https || false,
   stats: process.env.verbose === 'true' ? 'normal' : 'errors-only',
@@ -62,16 +62,17 @@ const devConfig = {
   },
   plugins: [
     new forkTsCheckerWebpackPlugin({
-      tsconfig: path.resolve(process.cwd(), 'tsconfig.dev.json'),
-      eslint: true,
-      watch: [path.resolve(process.cwd(), 'src')],
+      typescript: {
+        configFile: path.resolve(process.cwd(), 'tsconfig.dev.json'),
+      },
+      eslint: { files: './src/**/*.{ts,tsx,js,jsx}' },
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: devServerConfig,
   optimization: {
-    moduleIds: 'named'
-  }
+    moduleIds: 'named',
+  },
 };
 
 module.exports = merge(base, devConfig);
