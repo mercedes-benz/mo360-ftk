@@ -11,8 +11,8 @@ import Provider from './I18nProvider';
 // tslint:disable
 import 'intl-pluralrules';
 import '@formatjs/intl-relativetimeformat/polyfill';
-import '@formatjs/intl-relativetimeformat/dist/locale-data/de'; // Add locale data for de
-import '@formatjs/intl-relativetimeformat/dist/locale-data/en'; // Add locale data for en
+import '@formatjs/intl-relativetimeformat/locale-data/de'; // Add locale data for de
+import '@formatjs/intl-relativetimeformat/locale-data/en'; // Add locale data for en
 // tslint:enable
 
 interface IWrapperState {

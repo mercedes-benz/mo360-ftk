@@ -14,7 +14,7 @@ export class I18nService {
     private intl: IntlShape,
   ) {}
 
-  public translate(translationId: string, params: object = {}): JSX.Element | string {
+  public translate(translationId: string, params: Record<string, any> = {}): JSX.Element | string {
     try {
       const message = this.registry.get(translationId);
 
