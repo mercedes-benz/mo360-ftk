@@ -24,7 +24,7 @@ import {
   CardActionArea,
   Grid,
 } from '@material-ui/core';
-import { I18nService, inject, withInject, serviceIds, RouterServiceType } from '@daimler/ftk-core';
+import { I18nService, inject, withInject, serviceIds, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 import Logo from '../assets/images/logo.png';
 import LogoGithub from '../assets/images/github-logo.png';
@@ -62,7 +62,7 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
   public i18n!: I18nService;
 
   @inject(serviceIds.routerService)
-  public router!: RouterServiceType;
+  public router!: RouterService;
 
   public render(): JSX.Element {
     const { classes } = this.props;

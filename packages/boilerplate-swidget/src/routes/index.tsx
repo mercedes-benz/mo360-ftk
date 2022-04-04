@@ -4,12 +4,12 @@
 import withLayout from '../decorators/withLayout';
 import DemoContent from './DemoContent';
 import Home from './Home';
-import { RouteConfigType } from '@daimler/ftk-core';
+import { RouteConfig } from '@daimler/ftk-core';
 
 const LayoutHome = withLayout(Home);
 const LayoutDemoContent = withLayout(DemoContent);
 
-const routes: RouteConfigType = [
+const routes: RouteConfig = [
   {
     action: () => LayoutHome,
     name: 'home',

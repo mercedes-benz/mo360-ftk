@@ -30,8 +30,10 @@ export { TranslationProvider } from './i18n/component/TranslationProvider';
 // Router
 export { default as RouterProvider } from './router/component/RouterProvider';
 export { default as Link } from './router/component/Link';
-export { default as RouterServiceType } from './router/lib/RouterService.type';
-export { default as RouteConfigType } from './router/lib/RouteConfig.type';
+export { default as RouterService } from './router/lib/RouterService.type';
+export { default as RouteConfig } from './router/lib/RouteConfig.type';
+export { default as RouteParameter } from './router/lib/RouteParameter.type';
+export { default as RouteQuery } from './router/lib/RouteQuery.type';
 export { default as PathSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Path';
 export { default as QueryStringSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/QueryString';
 export { default as HashbangSerializeRouteInUrlStrategy } from './router/lib/serializeRouteInUrlStrategy/Hashbang';

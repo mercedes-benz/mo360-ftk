@@ -8,7 +8,7 @@ import {
   serviceIds,
   App,
   TranslationProvider,
-  RouteConfigType,
+  RouteConfig,
   RouterProvider,
 } from '@daimler/ftk-core';
 import * as React from 'react';
@@ -20,7 +20,7 @@ const config = require(`../config/${__CONFIG__}`).default;
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 function init(container: IDiContainer): void {
-  container.bind<RouteConfigType>(serviceIds.routes).toConstantValue(routes);
+  container.bind<RouteConfig>(serviceIds.routes).toConstantValue(routes);
 }
 
 // Create your custom MUI Theme here or import it
