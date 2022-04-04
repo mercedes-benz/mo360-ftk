@@ -1,8 +1,18 @@
 {
   "private": true,
   "name": "mono",
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "12"
+  },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "build:core": "yarn workspace @daimler/ftk-core build",
+    "start": "concurrently \"yarn workspace @daimler/boiler-host start\" \"yarn workspace @daimler/boiler-swidget start\""
+  }
 }
