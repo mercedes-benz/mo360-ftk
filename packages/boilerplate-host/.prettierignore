@@ -1,0 +1,75 @@
+# Files Prettier does not handle very well #
+############################################
+
+# Public project files #
+########################
+public/
+dist/
+
+# License #
+###########
+LICENSE
+
+# Configuration files #
+#######################
+.npmrc
+.nvmrc
+.dockerignore
+.gitlab-ci.yml
+.editorconfig
+.gitattributes
+.gitignore
+.prettierignore
+.stylelintrc
+.eslintignore
+.lintstagedrc.js
+Dockerfile*
+
+# Logging #
+###########
+*.log
+
+# Test files #
+##############
+coverage/
+test/functional/**/*.js
+*.snap
+
+# Templates #
+#############
+*.ejs
+
+# Image files #
+###############
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+
+# Font files #
+##############
+*.ttf
+*.svg
+*.woff
+*.eot
+*.woff2
+*.otf
+
+# CSS Typings #
+###############
+*.css.d.ts
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Shell Scripts #
+#################
+*.sh

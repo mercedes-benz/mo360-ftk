@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2019"
+    ],
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types/"]
+  },
+  "include": [
+    "typings.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ],
+  "exclude": ["node_modules"]
+}
