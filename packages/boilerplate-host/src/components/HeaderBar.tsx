@@ -2,11 +2,12 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 import * as React from 'react';
-import { AppBar, Typography, Toolbar, Grid, Link, makeStyles } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Grid, Link, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import LanguageSwitch from './LanguageSwitch';
 import { useRouter } from '@daimler/ftk-core';
 
-const useStyles = makeStyles(({ palette, spacing }) => ({
+const useStyles = makeStyles(({ palette, spacing }: Theme) => ({
   headerBar: {
     marginBottom: spacing(3),
   },

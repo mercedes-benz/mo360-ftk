@@ -2,12 +2,13 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 import * as React from 'react';
-import { Typography, Button, makeStyles } from '@material-ui/core';
-import LanguageIcon from '@material-ui/icons/Language';
-import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+import { Typography, Button, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import LanguageIcon from '@mui/icons-material/Language';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import { useI18n } from '@daimler/ftk-core';
 
-const useStyles = makeStyles(({ palette }) => ({
+const useStyles = makeStyles(({ palette }: Theme) => ({
   languageToggle: {
     position: 'relative',
 

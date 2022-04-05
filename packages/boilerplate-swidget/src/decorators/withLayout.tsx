@@ -4,7 +4,7 @@
 import * as React from 'react';
 import { useI18n } from '@daimler/ftk-core';
 import HeaderBar from '../components/HeaderBar';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   pageContainer: {

@@ -10,20 +10,8 @@
  * use the hook-based react style.
  */
 
-import {
-  createStyles,
-  withStyles,
-  WithStyles,
-  Container,
-  Typography,
-  Box,
-  Button,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActionArea,
-  Grid,
-} from '@material-ui/core';
+import { Container, Typography, Box, Button, Card, CardMedia, CardContent, CardActionArea, Grid } from '@mui/material';
+import { createStyles, withStyles, WithStyles } from '@mui/styles';
 import { I18nService, inject, withInject, serviceIds, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 import Logo from '../assets/images/logo.png';

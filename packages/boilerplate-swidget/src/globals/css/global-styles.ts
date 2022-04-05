@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import { createStyles, Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
+import { createStyles } from '@mui/styles';
 
 export const globalStyles = {
   gridSystem: ({ breakpoints }: Theme) =>

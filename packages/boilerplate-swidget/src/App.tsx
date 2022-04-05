@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import { MuiThemeProvider, createTheme, CssBaseline } from '@material-ui/core';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import {
   IDiContainer,
   ISwidget,
@@ -44,13 +44,13 @@ const theme = createTheme({
 const swidget: ISwidget = (): JSX.Element => {
   return (
     <App name="My-App" init={init} config={config}>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline>
           <TranslationProvider translations={TranslationsI18n}>
             <RouterProvider />
           </TranslationProvider>
         </CssBaseline>
-      </MuiThemeProvider>
+      </ThemeProvider>
     </App>
   );
 };
