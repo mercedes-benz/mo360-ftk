@@ -3,10 +3,11 @@
 
 const path = require('path'),
   fs = require('fs'),
+  webpack = require('webpack'),
   htmlWebpackPlugin = require('html-webpack-plugin'),
   camelCase = require('camelcase'),
   packageJson = require(path.resolve(process.cwd(), 'package.json')),
-  webpack = require('webpack'),
+  { merge } = require('webpack-merge'),
   miniCssExtractPlugin = require('mini-css-extract-plugin'),
   copyWebpackPlugin = require('copy-webpack-plugin'),
   devMode = process.env.build === 'dev',

@@ -29,7 +29,7 @@ const Home = () => {
       <Logo />
       <Typography variant={'h5'} gutterBottom={true} align="center">
         {i18n.translateToString('Headline', {
-          appName: config.getConfig<ProjectConfig, {}>().project.appName,
+          appName: config.getConfig<ProjectConfig, Record<string, unknown>>().project.appName,
         })}
       </Typography>
 

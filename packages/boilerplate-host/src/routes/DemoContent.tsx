@@ -57,7 +57,7 @@ const DemoRouteStyles = () =>
     },
   });
 
-class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}> {
+class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, Record<string, unknown>> {
   @inject()
   public i18n!: I18nService;
 

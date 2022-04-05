@@ -2,7 +2,7 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 const base = require('./base'),
-  merge = require('webpack-merge'),
+  { merge } = require('webpack-merge'),
   path = require('path'),
   faviconsWebpackPlugin = require('favicons-webpack-plugin'),
   terserPlugin = require('terser-webpack-plugin'),

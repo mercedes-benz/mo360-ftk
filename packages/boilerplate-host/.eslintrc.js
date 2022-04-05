@@ -36,7 +36,6 @@ module.exports = {
     // e.g. '@typescript-eslint/no-parameter-properties': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/indent': 'off', // this is handled by prettier
-    '@typescript-eslint/interface-name-prefix': 'warn', // TypeScript changed their mind and now recommend to not prefix interfaces
     '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: true }],
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/rules-of-hooks': 'error',
