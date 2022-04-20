@@ -8,43 +8,7 @@ ___
 
 ## Quickstart Guide
 
-From zero to a running WebApp with only a few simple commands:
-
-1. Create a **new** `npm` project
-
-    ```bash
-    mkdir my-app
-    cd my-app
-    npm init -y
-    ```
-
-2. Install the FTK boilerplate as your first dependency
-
-    ```bash
-    npm install @daimler/ftk-boilerplate
-    ```
-
-    > Once the boilerplate installation is finished you will find all necessary project files in your project folder.  
-    > Now the 3rd party dependencies can be installed.
-
-3. Install 3rd party dependencies
-
-    ```bash
-    npm install
-    ```
-
-4. Start developing
-
-   ```bash
-   npm start
-   ```
-
-**Happy coding!**
-
-## Requirements
-
-* Admin rights on your local machine
-* NPM installed
+TODO
 
 ## Contributing
 

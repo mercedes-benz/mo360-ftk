@@ -1,9 +1,0 @@
-{
-  "name": "rush-package-lock",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@microsoft/rush-lib": "^5.33.2",
-    "js-yaml": "~3.14.0"
-  }
-}

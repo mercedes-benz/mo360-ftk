@@ -1,3 +1,0 @@
-#!/bin/sh
-# Called after "git commit" with no arguments. 
-git update-index --again
