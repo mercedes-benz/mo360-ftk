@@ -2,12 +2,10 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 const base = require('./base'),
-  { merge } = require('webpack-merge'),
+  merge = require('webpack-merge'),
   path = require('path'),
-  faviconsWebpackPlugin = require('favicons-webpack-plugin'),
   terserPlugin = require('terser-webpack-plugin'),
   cssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
-  packageJson = require(path.resolve(process.cwd(), 'package.json')),
   SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin'),
   sourceMapGeneration =
     process.env.sourceMap === 'true'
@@ -41,14 +39,6 @@ const prodConfig = {
   plugins: [
     new SimpleProgressWebpackPlugin({
       format: process.env.verbose === 'true' ? 'expanded' : 'compact',
-    }),
-    new faviconsWebpackPlugin({
-      logo: packageJson.config.AppIcon,
-      prefix: (packageJson.config.publicPath || '') + 'webapp/',
-      inject: 'force',
-      favicons: {
-        start_url: '../',
-      },
     }),
   ],
   optimization: {

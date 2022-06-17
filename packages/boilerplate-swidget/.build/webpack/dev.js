@@ -2,7 +2,7 @@
 // Copyright (c) 2020 Daimler TSS GmbH
 
 const base = require('./base'),
-  { merge } = require('webpack-merge'),
+  merge = require('webpack-merge'),
   webpack = require('webpack'),
   forkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'),
   path = require('path'),
@@ -37,13 +37,6 @@ const devConfig = {
       {
         test: /\.tsx?$/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: true,
-              plugins: ['react-hot-loader/babel'],
-            },
-          },
           {
             loader: 'ts-loader',
             options: {

@@ -57,9 +57,6 @@
     "regenerator-runtime": "~0.13.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/preset-env": "~7.16.11",
-    "@babel/runtime": "~7.17.8",
     "@hot-loader/react-dom": "~17.0.2",
     "@types/node": "~12.0.0",
     "@types/prop-types": "~15.7.4",
@@ -67,7 +64,6 @@
     "@types/react-dom": "~17.0.14",
     "@typescript-eslint/eslint-plugin": "~5.17.0",
     "@typescript-eslint/parser": "~5.17.0",
-    "babel-loader": "^8.2.4",
     "bundle-loader": "^0.5.6",
     "camelcase": "^6.3.0",
     "copy-webpack-plugin": "~6.0.3",
@@ -85,7 +81,6 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "expose-loader": "3.1.0",
-    "favicons-webpack-plugin": "5.0.2",
     "file-loader": "~6.2.0",
     "fork-ts-checker-webpack-plugin": "6.2.6",
     "html-webpack-plugin": "5.5.0",
@@ -115,7 +110,7 @@
     "url-loader": "4.1.1",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4",
-    "webpack-merge": "~5.8.0"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "~4.2.2"
   }
 }

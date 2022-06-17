@@ -9,7 +9,7 @@ import { EventEmitter } from '../interconnection/EventEmitter';
 import { InterconnectionService } from '../interconnection/InterconnectionService';
 import serviceIds from './serviceIds';
 import RouteConfigType from '../router/lib/RouteConfig.type';
-import Path from '../router/lib/serializeRouteInUrlStrategy/Path';
+import Hashbang from '../router/lib/serializeRouteInUrlStrategy/Hashbang';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -25,14 +25,13 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
       name: 'home',
       path: '',
       action: () => {
-        return () => <h1>Hello World</h1>
+        // eslint-disable-next-line react/display-name
+        return () => <h1>Hello World</h1>;
       },
-    }
+    },
   ]);
 
-  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toConstantValue(
-    new Path()
-  );
+  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toConstantValue(new Hashbang());
 
   /** start with empty translations */
   container.bind<ITranslationMap>(serviceIds.translations).toConstantValue({});

@@ -4,7 +4,7 @@ import RouteQueryType from '../RouteQuery.type';
 class Hashbang implements StrategyType {
   deserialize(payload: string) {
     const buffer = new URL(payload);
-    const urlObject = new URL(decodeURIComponent(buffer.hash.replace('#!', '')), buffer);
+    const urlObject = new URL(buffer.hash.replace('#!', ''), buffer);
 
     return {
       query: Object.fromEntries(
@@ -22,7 +22,7 @@ class Hashbang implements StrategyType {
     const payloadQueryString = new URLSearchParams(payload.query).toString();
     const buffer = new URL(payload.pathname + (payloadQueryString.length > 0 ? '?' + payloadQueryString : ''), currentUrl);
 
-    urlObject.hash = encodeURIComponent(`!${buffer.pathname}${buffer.search}`);
+    urlObject.hash = `!${buffer.pathname}${buffer.search}`;
 
     return urlObject.toString();
   }

@@ -38,13 +38,6 @@ const devConfig = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'babel-loader',
-            options: {
-              babelrc: true,
-              plugins: ['react-hot-loader/babel'],
-            },
-          },
-          {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,

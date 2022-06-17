@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2020 Daimler TSS GmbH
 
-import {IDiContainer, IDiContext} from '..';
+import { IDiContainer, IDiContext } from '..';
 import serviceIds from './serviceIds';
 import RouterServiceType from '../router/lib/RouterService.type';
 import QueryString from '../router/lib/serializeRouteInUrlStrategy/QueryString';
@@ -23,7 +23,7 @@ function registerSwidgetDependencies(container: IDiContainer, swidgetName: strin
       ? diContext.container.get<string>(serviceIds.currentSwidget.uniqueId)
       : '';
 
-    return new QueryString(`${router.getRoute().name}_${swidgetName}${uniqueId}`);
+    return new QueryString(`${router.getRoute().name}_${swidgetName}_${uniqueId}`);
   });
 }
 
