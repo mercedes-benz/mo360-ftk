@@ -3,7 +3,7 @@ name: Release packages
 env:
   CUSTOM_REG: ${{ secrets.CUSTOM_REG }}
   CUSTOM_AUTH_TOKEN: ${{ secrets.CUSTOM_AUTH_TOKEN }}
-  NPMJS_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+  NPMJS_AUTH_TOKEN: ${{ secrets.MBTI_NPM_TOKEN }}
 
 on:
   push:
