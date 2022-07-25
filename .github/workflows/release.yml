@@ -3,7 +3,7 @@ name: Release packages
 env:
   CUSTOM_REG: ${{ secrets.CUSTOM_REG }}
   CUSTOM_AUTH_TOKEN: ${{ secrets.CUSTOM_AUTH_TOKEN }}
-  NPMJS_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+  NPMJS_AUTH_TOKEN: ${{ secrets.MBTI_NPM_TOKEN }}
 
 on:
   push:
@@ -14,21 +14,29 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js lts/erbium
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install Rush
-      run: npm install --global @microsoft/rush
-    - name: Check state
-      run: |
-        rush install
-        rush build
-        rush test
-    - name: Release @npmjs
-      run: |
-        rush publish -p --version-policy public --include-all -n ${NPMJS_AUTH_TOKEN}
-    - name: Release @custom registry
-      run: |
-        rush publish -p --version-policy public --include-all -r ${CUSTOM_REG} -n ${CUSTOM_AUTH_TOKEN}
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+      - name: Install
+        run: yarn
+      - name: Build
+        run: |
+          yarn build:core
+      - name: Release @npmjs
+        working-directory: packages/core
+        run: |
+          cat > .npmrc <<EOF
+          //registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN
+          EOF
+          yarn publish --non-interactive --access public
+          rm .npmrc
+      - name: Release @artifactory
+        working-directory: packages/core
+        run: |
+          cat > .npmrc <<EOF
+          //$CUSTOM_REG/:_authToken=$CUSTOM_AUTH_TOKEN
+          EOF
+          yarn publish --non-interactive --access public
+          rm .npmrc
