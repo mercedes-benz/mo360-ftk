@@ -1,5 +1,10 @@
 ![Banner](./docs/assets/banner.png)
 
+### Deprecated
+
+We planned the last release to move towards Webpack Module Federation (https://webpack.js.org/concepts/module-federation/) an official microfrontend implementation which replaces the mo360-ftk way.
+This should help the users to easily migrate towards WMF fully.
+
 # Mercedes-Benz MO360 Frontend Toolkit (FTK)
 
 If you want to learn more about the Mercedes-Benz MO360 FTK, check out our [documentation](./docs/README.md).
