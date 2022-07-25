@@ -9,9 +9,12 @@ import withInject, { IWithDiProps } from './withInject';
  * for service providers which might be referenced multiple times (i.e. notification service)
  * but should not re-bind services to DI or introduce new DOM elements when already rendered.
  */
-const singleton = <TProps extends {}>(boundServiceId: string, Component: React.ComponentType<TProps>) => {
+const singleton = <TProps extends React.PropsWithChildren<unknown>>(
+  boundServiceId: string,
+  Component: React.ComponentType<TProps>,
+) => {
   return withInject(
-    class extends React.Component<TProps & IWithDiProps, {}> {
+    class extends React.Component<TProps & IWithDiProps, unknown> {
       public displayName = 'singletonWithInject';
       public render() {
         if (this.props.container.isBound(boundServiceId)) {
