@@ -13,6 +13,7 @@ export { ConfigProvider } from './config/component/Provider';
 
 // ErrorHandler
 export { ErrorHandler } from './errorHandler/lib/ErrorHandler';
+export { default as IErrorHandlerStrategy } from './errorHandler/lib/interface/IErrorHandlerStrategy';
 
 import { interfaces } from 'inversify';
 export type IDiContainer = interfaces.Container;

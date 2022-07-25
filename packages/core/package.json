@@ -24,7 +24,8 @@
     "build": "npm run compile",
     "prepack": "npm run build",
     "clean": "rimraf lib",
-    "compile": "tsc"
+    "compile": "tsc",
+    "watch": "tsc -w"
   },
   "dependencies": {
     "@formatjs/intl-relativetimeformat": "^10.0.1",

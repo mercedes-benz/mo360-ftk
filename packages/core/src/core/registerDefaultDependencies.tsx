@@ -10,6 +10,7 @@ import { InterconnectionService } from '../interconnection/InterconnectionServic
 import serviceIds from './serviceIds';
 import RouteConfigType from '../router/lib/RouteConfig.type';
 import Hashbang from '../router/lib/serializeRouteInUrlStrategy/Hashbang';
+import { DefaultErrorHandlerStrategy } from '../errorHandler/lib/DefaultErrorHandlerStrategy';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -46,9 +47,12 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
   });
 
   /** asset resolver */
-  const url: URL = new URL(window.location.href) as any;
+  const url = new URL(window.location.href);
   container.bind(serviceIds.currentSwidget.url).toConstantValue(url);
   container.bind(serviceIds.currentSwidget.assetResolver).toConstantValue(getDefaultAssetResolver(url));
+
+  /** error-handler */
+  container.bind(serviceIds.errorHandlerStrategy).toConstantValue(new DefaultErrorHandlerStrategy());
 }
 
 registerDefaultDependencies.displayName = 'registerDefaultDependencies';

@@ -6,6 +6,10 @@ import * as React from 'react';
 import { IDiContainer } from '../..';
 import BindToDi from '../../di/component/BindToDi';
 import { ErrorHandler } from '../lib/ErrorHandler';
+import withInject from '../../di/hoc/withInject';
+import inject from '../../di/hoc/inject';
+import serviceIds from '../../core/serviceIds';
+import IErrorHandlerStrategy from '../lib/interface/IErrorHandlerStrategy';
 
 export interface IState {
   error: string;
@@ -16,20 +20,14 @@ class Provider extends React.Component<{}, IState> {
     error: undefined,
   };
 
-  private errorHandler: ErrorHandler;
+  @inject(serviceIds.errorHandlerStrategy) private errorHandlerStrategy: IErrorHandlerStrategy;
 
   private bindServices = once((container: IDiContainer) => {
-    this.errorHandler = new ErrorHandler();
-
-    container.bind<ErrorHandler>(ErrorHandler).toConstantValue({
-      handleError: (message: string, stacktrace: string): void => {
-        this.setState({
-          error: `Error: ${message}`,
-        });
-
-        this.errorHandler.handleError(message, stacktrace);
-      },
-    });
+    container.bind<ErrorHandler>(ErrorHandler).toConstantValue(
+      new ErrorHandler({
+        handleError: this.handleError
+      })
+    )
   });
 
   public render() {
@@ -41,12 +39,16 @@ class Provider extends React.Component<{}, IState> {
   }
 
   public componentDidCatch(error: Error): void {
+    this.handleError(error.message, error.stack)
+  }
+
+  protected handleError(message: string, stacktrace: string): void {
     this.setState({
-      error: `Error: ${error.message}`,
+      error: `Error: ${message}`,
     });
 
-    this.errorHandler.handleError(error.message, error.stack);
+    this.errorHandlerStrategy.handleError(message, stacktrace);
   }
 }
 
-export default Provider;
+export default withInject(Provider);

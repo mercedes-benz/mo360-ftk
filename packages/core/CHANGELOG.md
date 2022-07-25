@@ -1,6 +1,6 @@
-# Changelog
+# Change Log - @daimler/ftk-core
 
-All notable changes to this project will be documented in this file.
+This log was last generated on Tue, 06 Apr 2021 07:20:50 GMT and should not be manually modified.
 
 ## [0.4.0] - 2022.07.25
 
@@ -8,26 +8,74 @@ All notable changes to this project will be documented in this file.
 - Change router implementation to work with WMF
 - Removed rush as builder -> use yarn workspaces instead
 
+## 0.3.5
+Tue, 06 Apr 2021 07:20:50 GMT
+
+*Version update only*
+
+## 0.3.4
+Wed, 03 Mar 2021 11:20:02 GMT
+
+*Version update only*
+
+## 0.3.3
+Thu, 18 Feb 2021 14:38:23 GMT
+
+*Version update only*
+
 ## [0.3.2] - 2020.10.26
 
-Changed description
+*Version update only*
 
-## [0.3.1] - 2020.10.14
+## 0.3.4
+Wed, 03 Mar 2021 11:20:02 GMT
 
-Bump
+*Version update only*
 
-## [0.3.0] - 2020.10.09
+## 0.3.3
+Thu, 18 Feb 2021 14:38:23 GMT
 
-Fix allowing projects to upgrade 'react'
+*Version update only*
 
-## [0.2.0] - 2020.10.08
+## 0.3.2
+2020.10.26
 
-Bump
+### Updates
 
-## [0.1.1] - 2020.10.01
+- Changed description
 
-Add missing README.md
+## 0.3.1
+2020.10.14
 
-## [0.1.0]
+### Updates
 
-Initial publish
+- Bump
+
+## 0.3.0
+2020.10.09
+
+### Updates
+
+- Fix allowing projects to upgrade 'react'
+
+## 0.2.0
+2020.10.08
+
+### Updates
+
+- Bump
+
+## 0.1.1
+2020-10-01
+
+### Updates
+
+- Add missing README.md
+
+## 0.1.0
+2020-10-01
+
+### Updates
+
+- Initial publish
+

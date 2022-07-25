@@ -13,6 +13,7 @@ const serviceIds = {
   routerSerializeRouteInUrlStrategy: 'ftk.core.router.serializeRouteInUrlStrategy',
   routerService: 'ftk.core.router.service',
   routes: 'ftk.core.routes',
+  errorHandlerStrategy: 'ftk.core.errorHandler.strategy',
 };
 
 export default serviceIds;
