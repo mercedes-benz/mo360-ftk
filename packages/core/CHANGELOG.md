@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2022.07.25
+
+- Rebuild swidget loading to use WMF (Webpack Module Federation): https://webpack.js.org/concepts/module-federation/
+- Change router implementation to work with WMF
+- Removed rush as builder -> use yarn workspaces instead
+
 ## [0.3.2] - 2020.10.26
 
 Changed description
