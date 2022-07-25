@@ -1,7 +1,7 @@
 {
-  "name": "@daimler/boiler-host",
+  "name": "@daimler/example-host",
   "version": "0.3.2",
-  "description": "Mercedes-Benz MO360 Frontend Toolkit | Boilerplate (Source)",
+  "description": "Mercedes-Benz MO360 Frontend Toolkit | Example (Host)",
   "license": "MIT",
   "author": "Daimler TSS GmbH",
   "config": {

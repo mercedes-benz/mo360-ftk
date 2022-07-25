@@ -23,6 +23,6 @@
   ],
   "scripts": {
     "build:core": "yarn workspace @daimler/ftk-core build",
-    "start": "concurrently \"yarn workspace @daimler/boiler-host start\" \"yarn workspace @daimler/boiler-swidget start\""
+    "start": "concurrently \"yarn workspace @daimler/example-host start\" \"yarn workspace @daimler/example-swidget start\""
   }
 }
