@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2020 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 import * as DE from './de.json';
 import * as EN from './en.json';

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2020 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 const base = require('./base'),
   merge = require('webpack-merge'),

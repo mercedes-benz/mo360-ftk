@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2020 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 const breakpoints = [320, 480, 575, 599, 736, 768, 839, 980, 992, 1024, 1200, 1280, 1366, 1440, 1690, 1920];
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2020 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 import { DiContainer, IDiContainer, IRouteConfig, kernel, Route, serviceIds, App } from '@daimler/ftk-core';
 import * as React from 'react';

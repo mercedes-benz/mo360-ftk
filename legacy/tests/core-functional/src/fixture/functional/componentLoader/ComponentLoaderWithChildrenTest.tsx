@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2020 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 import { inject, ISwidget, withInject } from '@daimler/ftk-core';
 import { ComponentLoader } from '@daimler/ftk-core/lib/privateapi';

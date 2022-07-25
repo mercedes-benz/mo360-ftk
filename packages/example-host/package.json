@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "description": "Mercedes-Benz MO360 Frontend Toolkit | Example (Host)",
   "license": "MIT",
-  "author": "Daimler TSS GmbH",
+  "author": "Mercedes-Benz Tech Innovation GmbH",
   "config": {
     "AppIcon": "./src/assets/appIcon/logo.png",
     "title": "WebApp",

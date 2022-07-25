@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2021 Daimler TSS GmbH
+// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
 
 import * as React from 'react';
 import DeprecatedSwidgetLoader from './DeprecatedSwidgetLoader';
