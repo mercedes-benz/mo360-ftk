@@ -34,6 +34,8 @@ export interface IAppProps {
    * configuration from the parent host will be merged with the given config object.
    */
   config?: IConfigData;
+
+  children?: React.ReactNode | undefined;
 }
 
 /**
