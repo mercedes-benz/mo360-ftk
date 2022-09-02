@@ -8,6 +8,7 @@ import BindToDi from '../../di/component/BindToDi';
 import withInject from '../../di/hoc/withInject';
 import { findBoundContainer } from '../../di/lib/findBoundContainer';
 import { ConfigService } from '../lib/ConfigService';
+import { PropsWithChildren } from 'react';
 
 const defaultConfig = Object.seal({
   core: {
@@ -23,7 +24,7 @@ export interface IConfigProviderProps {
   config?: IConfigData<any, any>;
 }
 
-class Provider extends React.Component<IConfigProviderProps> {
+class Provider extends React.Component<IConfigProviderProps & PropsWithChildren> {
   private bindServices = once((container: IDiContainer) => {
     container.bind<ConfigService>(ConfigService).toDynamicValue((context: IDiContext) => {
       let config: IConfigData = defaultConfig;

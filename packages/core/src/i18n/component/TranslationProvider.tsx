@@ -11,6 +11,7 @@ import inject from '../../di/hoc/inject';
 import withInject from '../../di/hoc/withInject';
 import ITranslationMap from '../lib/interface/ITranslationMap';
 import TranslationMap from '../lib/TranslationMap';
+import { PropsWithChildren } from 'react';
 
 /**
  * Deep-merges translation map trees together. The operation is immutable (neither input arg is mutated).
@@ -54,7 +55,7 @@ interface ITranslationProviderProps {
  *   <HelloWorldComponent />
  * </TranslationProvider>
  */
-class Provider extends React.Component<ITranslationProviderProps> {
+class Provider extends React.Component<ITranslationProviderProps & PropsWithChildren> {
   @inject() public configService: ConfigService;
 
   public setupTranslations = once((container: IDiContainer) => {

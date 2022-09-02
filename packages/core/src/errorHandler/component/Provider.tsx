@@ -10,12 +10,13 @@ import withInject from '../../di/hoc/withInject';
 import inject from '../../di/hoc/inject';
 import serviceIds from '../../core/serviceIds';
 import IErrorHandlerStrategy from '../lib/interface/IErrorHandlerStrategy';
+import { PropsWithChildren } from 'react';
 
 export interface IState {
   error: string;
 }
 
-class Provider extends React.Component<{}, IState> {
+class Provider extends React.Component<PropsWithChildren, IState> {
   public state: IState = {
     error: undefined,
   };
