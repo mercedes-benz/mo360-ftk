@@ -2,9 +2,9 @@
 
 This file contains Legal Disclaimers for linking in Issues and Pull Requests.
 
-## Daimler TSS GmbH
+## Mercedes-Benz Tech Innovation GmbH
 
-Daimler TSS GmbH  
+Mercedes-Benz Tech Innovation GmbH  
 Wilhelm-Runge-Straße 11  
 89081 Ulm, Germany  
 Phone: +4973150506  

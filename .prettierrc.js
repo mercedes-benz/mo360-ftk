@@ -5,11 +5,11 @@ module.exports = {
   printWidth: 120,
 
   // Use .gitattributes to manage newlines
-  endOfLine: 'auto',
+  endOfLine: "auto",
 
   // Use single quotes instead of double quotes
   singleQuote: true,
 
   // Use commas everywhere, to make git line changes more readable
-  trailingComma: 'all',
+  trailingComma: "all",
 };

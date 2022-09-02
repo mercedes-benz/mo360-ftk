@@ -1,0 +1,52 @@
+{
+  "name": "@daimler/ftk-core",
+  "version": "0.4.0",
+  "description": "Mercedes-Benz MO360 Frontend Toolkit | Core",
+  "license": "MIT",
+  "author": "Mercedes-Benz Tech Innovation GmbH",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": ">=12.13.0",
+    "npm": ">=6.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daimler/mo360-ftk.git"
+  },
+  "scripts": {
+    "build": "npm run compile",
+    "prepack": "npm run build",
+    "clean": "rimraf lib",
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@formatjs/intl-relativetimeformat": "^10.0.1",
+    "@types/lodash": "^4.14.182",
+    "eventemitter3": "^4.0.7",
+    "history": "^5.3.0",
+    "intl-pluralrules": "^1.3.1",
+    "inversify": "^6.0.1",
+    "lodash": "^4.17.21",
+    "react-intl": "^5.24.8",
+    "reflect-metadata": "^0.1.13",
+    "universal-router": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0 <18.0.0",
+    "tslib": "^2.0.0"
+  }
+}

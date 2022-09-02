@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "noUnusedLocals": false
+  },
+  "exclude": ["stories/**/*", "test/**/*"]
+}
