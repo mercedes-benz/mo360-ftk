@@ -40,6 +40,5 @@
   - [Swidgets](./guides/swidgets.md)
   - [Create a WebApp](./guides/create-app.md)
   - [Contributing](../CONTRIBUTING.md)
-  - [Fix linting error and warnings](./guides/fix-linting-errors-and-warnings.md)
   - [Exposing modules](./guides/exposing-modules.md)
-  - [XHR](./guides/xhr-with-axios.md)
+  
