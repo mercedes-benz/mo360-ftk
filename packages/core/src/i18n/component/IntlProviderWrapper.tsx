@@ -7,6 +7,7 @@ import { ConfigService } from '../../config/lib/ConfigService';
 import singleton from '../../di/hoc/singleton';
 import withInject, { IWithDiProps } from '../../di/hoc/withInject';
 import Provider from './I18nProvider';
+import { PropsWithChildren } from 'react'; // Add locale data for en
 
 // tslint:disable
 import 'intl-pluralrules';
@@ -23,8 +24,8 @@ interface IWrapperState {
  * This wrapper is mainly needed as the injectIntl() requires the defaultLocale to be set on
  * construction. So we have to know outside our Provider what locale to use before we can wrap it.
  */
-class IntlProviderWrapper extends React.Component<IWithDiProps, IWrapperState> {
-  public static getDerivedStateFromProps(nextProps: IWithDiProps, prevState: IWrapperState) {
+class IntlProviderWrapper extends React.Component<IWithDiProps & PropsWithChildren, IWrapperState> {
+  public static getDerivedStateFromProps(nextProps: IWithDiProps & PropsWithChildren, prevState: IWrapperState) {
     if (!prevState.defaultLocale) {
       let defaultLocale = 'en';
       try {

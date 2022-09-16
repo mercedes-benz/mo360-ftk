@@ -12,6 +12,7 @@ import Registry from '../../util/Registry';
 import { I18nService } from '../lib/I18nService';
 import ITranslation from '../lib/interface/ITranslation';
 import TranslationMap from '../lib/TranslationMap';
+import { PropsWithChildren } from 'react';
 
 export interface II18nProviderProps extends WrappedComponentProps {
   lang: string;
@@ -28,7 +29,7 @@ function createTranslationRegistry(translationMap: ITranslationMap) {
   return registry;
 }
 
-export default class I18nProvider extends React.Component<II18nProviderProps & IWithDiProps, {}> {
+export default class I18nProvider extends React.Component<II18nProviderProps & IWithDiProps & PropsWithChildren, {}> {
   private bindService = once((container: IDiContainer) => {
     container.bind(I18nService).toDynamicValue((context: IDiContext) => {
       const getLang = () => this.props.lang;

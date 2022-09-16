@@ -6,12 +6,13 @@ import * as React from 'react';
 import { IDiContainer } from '../..';
 import ChildContainer from '../component/ChildContainer';
 import { diContext } from '../lib/diContext';
+import { PropsWithChildren } from 'react';
 
 export interface IProps {
   services: (container: IDiContainer) => void;
 }
 
-class BindToDi extends React.Component<IProps, {}> {
+class BindToDi extends React.Component<IProps & PropsWithChildren, {}> {
   private registerServices = once((container: IDiContainer) => {
     this.props.services(container);
   });

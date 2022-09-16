@@ -22,7 +22,6 @@
     "packages/*"
   ],
   "scripts": {
-    "build:core": "yarn workspace @daimler/ftk-core build",
-    "start": "concurrently \"yarn workspace @daimler/example-host start\" \"yarn workspace @daimler/example-swidget start\""
+    "build:core": "yarn workspace @daimler/ftk-core build"
   }
 }
