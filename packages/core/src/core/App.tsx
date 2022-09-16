@@ -12,6 +12,7 @@ import I18nProvider from '../i18n/component/IntlProviderWrapper';
 import registerDefaultDependencies from './registerDefaultDependencies';
 import registerSwidgetDependencies from './registerSwidgetDependencies';
 import serviceIds from './serviceIds';
+import { PropsWithChildren } from 'react';
 
 export interface IAppProps {
   /**
@@ -42,7 +43,7 @@ export interface IAppProps {
  *
  * This is a replacement for the previous "kernel" function.
  */
-export class App extends React.Component<IAppProps, {}> {
+export class App extends React.Component<IAppProps & PropsWithChildren, {}> {
   private setup = once((containerFromContext: IDiContainer | null) => {
     const isHotLoaded = containerFromContext !== null;
 

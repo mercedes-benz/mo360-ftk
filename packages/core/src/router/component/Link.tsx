@@ -2,6 +2,7 @@ import * as React from 'react';
 import RouteParameterType from '../lib/RouteParameter.type';
 import RouteQueryType from '../lib/RouteQuery.type';
 import {useRouter} from '../../util/Hooks';
+import { PropsWithChildren } from 'react';
 
 type LinkProps = {
   name: string;
@@ -9,7 +10,7 @@ type LinkProps = {
   query?: RouteQueryType;
 }
 
-const Link: React.FunctionComponent<LinkProps> = (props) => {
+const Link: React.FunctionComponent<LinkProps & PropsWithChildren> = (props) => {
   const router = useRouter();
   const url = router.linkTo(props.name, props.parameter, props.query);
 
