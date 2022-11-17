@@ -15,13 +15,9 @@ It is a mechanism to _provide_ packages (from a predefined list) that are bundle
 
 ## Why
 
-In order to optimize the swidget size and improve loading speed.
+In order to optimize the swidget size and improve loading speed, modules can be markes as shared, so that they are bundled and loaded individually. 
 
 ## How
 
-Add your `node_modules` to `.build/exposed.modules.custom.js` if you want to expose certain modules for your Host-App.
-
-The exposed name must match the expected name in the export section otherwise it will not work.
-
-Initially a couple of packages are exposed like the `@daimler/ftk-core` itself and also for example `react`, `react-dom`, `@material-ui/*`.
-If you are sure that only the swidget will provide have the packages for example MaterialUI, please remove the corresponding section.
+Since v0.4, the FTK uses the Webpack Module Federation plugin to handle shared modules.
+Please see the [Webpack documentation](https://webpack.js.org/plugins/module-federation-plugin/) for further informations.
