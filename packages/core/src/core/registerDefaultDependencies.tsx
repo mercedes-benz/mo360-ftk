@@ -9,8 +9,8 @@ import { EventEmitter } from '../interconnection/EventEmitter';
 import { InterconnectionService } from '../interconnection/InterconnectionService';
 import serviceIds from './serviceIds';
 import RouteConfigType from '../router/lib/RouteConfig.type';
-import Hashbang from '../router/lib/serializeRouteInUrlStrategy/Hashbang';
 import { DefaultErrorHandlerStrategy } from '../errorHandler/lib/DefaultErrorHandlerStrategy';
+import Path from '../router/lib/serializeRouteInUrlStrategy/Path';
 
 function registerDefaultDependencies(container: IDiContainer, name: string) {
   container.bind(serviceIds.name).toConstantValue(name);
@@ -32,7 +32,7 @@ function registerDefaultDependencies(container: IDiContainer, name: string) {
     },
   ]);
 
-  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toConstantValue(new Hashbang());
+  container.bind(serviceIds.routerSerializeRouteInUrlStrategy).toConstantValue(new Path());
 
   /** start with empty translations */
   container.bind<ITranslationMap>(serviceIds.translations).toConstantValue({});
