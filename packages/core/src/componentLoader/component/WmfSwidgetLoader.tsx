@@ -99,7 +99,7 @@ const WmfSwidgetLoader = (props: WmfSwidgetLoaderProps) => {
       }}
     >
       <React.Suspense fallback={ props.loadingPlaceholder || null }>
-        <Component />
+        <Component {...props.props}/>
       </React.Suspense>
     </BindToDi>
   );
