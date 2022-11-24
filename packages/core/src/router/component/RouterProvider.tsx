@@ -18,13 +18,18 @@ import { useDi, useFromDi } from '../../util/Hooks';
 
 const generateUrls: Function = require('universal-router/generateUrls').default;
 
-const RouterProvider: React.FunctionComponent<{}> = (props) => {
+export interface IRouterProviderProps {
+  baseUrl?: string
+}
+
+const RouterProvider: React.FunctionComponent<IRouterProviderProps> = (props) => {
   const serializeRouteInUrlStrategy = useFromDi<StrategyType>(serviceIds.routerSerializeRouteInUrlStrategy);
   const container = useDi();
   const routes: RouteConfigType = container.get(serviceIds.routes);
   const [activeRoute, setActiveRoute] = useState<RouteType & { component: React.ComponentType<any> }>(null);
   const [history, setHistory] = useState<BrowserHistory>(createBrowserHistory());
   const router = new UniversalRouter<React.ComponentType<any>, IMo360Context>(routes, {
+    baseUrl: props.baseUrl || null,
     resolveRoute: (context, params) => {
       if (typeof context.route.action === 'function') {
         const buffer = context.route.action(context, params);
