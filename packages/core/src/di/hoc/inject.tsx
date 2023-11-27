@@ -7,7 +7,7 @@ import { IDiContainer } from '../..';
 
 export default function inject(serviceId?: string | symbol | interfaces.Newable<{}>) {
   return (target: any, propertyKey: string) => {
-    Object.defineProperty(target, propertyKey, {
+    return Object.defineProperty(target, propertyKey, {
       enumerable: true,
       configurable: true,
       get() {
