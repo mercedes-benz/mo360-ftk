@@ -28,7 +28,7 @@ jobs:
         working-directory: packages/core
         run: |
           cat > .npmrc <<EOF
-          //registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN
+          //registry.npmjs.org/:_authToken=$MBTI_NPM_TOKEN
           EOF
           yarn publish --non-interactive --access public
           rm .npmrc
