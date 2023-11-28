@@ -17,7 +17,7 @@ ___
 ## Access through injection:
 
 ```tsx
-import { inject, withInject, RouterService } from '@daimler/ftk-core';
+import { inject, withInject, RouterService } from '@mercedes-benz/ftk-core';
 // ...
 class Example extends React.Component<{}, {}> {
   @inject()
@@ -33,7 +33,7 @@ ___
 ## Access through hook
 
 ```tsx
-import { useRouter } from '@daimler/ftk-core';
+import { useRouter } from '@mercedes-benz/ftk-core';
 // ...
 const router = useRouter();
 // ...

@@ -1,4 +1,4 @@
-# Change Log - @daimler/ftk-core
+# Change Log - @mercedes-benz/ftk-core
 
 This log was last generated on Tue, 06 Apr 2021 07:20:50 GMT and should not be manually modified.
 

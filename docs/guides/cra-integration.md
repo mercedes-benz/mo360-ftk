@@ -1,6 +1,6 @@
 # WMF + CRA
 - uses https://webpack.js.org/concepts/module-federation/ and https://create-react-app.dev/ to scaffold a mo360-hotloading-demo
-- WARNING: until this PR is not merged you have to manually patch the node_modules app-definition in `node_modules/@daimler/ftk-core/lib/core/App.d.ts` by adding `children?: React.ReactNode | undefined` to `IAppProps`
+- WARNING: until this PR is not merged you have to manually patch the node_modules app-definition in `node_modules/@mercedes-benz/ftk-core/lib/core/App.d.ts` by adding `children?: React.ReactNode | undefined` to `IAppProps`
 - FRAGE: i18n raus?
 # setup host
 ## install
@@ -8,7 +8,7 @@
   `npx create-react-app host --template typescript`
   `cd host`
 - install mo360; "force" since react-versions are not compatible yet
-  `npm i @daimler/ftk-core --save --force`
+  `npm i @mercedes-benz/ftk-core --save --force`
 - install rewired (https://github.com/timarney/react-app-rewired)
   `npm install react-app-rewired --save-dev`
 
@@ -67,7 +67,7 @@ import {
     serviceIds,
     RouterProvider,
     TranslationProvider
-} from '@daimler/ftk-core';
+} from '@mercedes-benz/ftk-core';
 
 function init(container: IDiContainer): void {
     container.bind<RouteConfig>(serviceIds.routes).toConstantValue([
@@ -174,7 +174,7 @@ import {
     serviceIds,
     RouterProvider,
     TranslationProvider
-} from '@daimler/ftk-core';
+} from '@mercedes-benz/ftk-core';
 
 function init(container: IDiContainer): void {
     container.bind<RouteConfig>(serviceIds.routes).toConstantValue([
@@ -226,7 +226,7 @@ import {
     RouterProvider,
     TranslationProvider,
     SwidgetLoader
-} from '@daimler/ftk-core';
+} from '@mercedes-benz/ftk-core';
 
 function init(container: IDiContainer): void {
     container.bind<RouteConfig>(serviceIds.routes).toConstantValue([

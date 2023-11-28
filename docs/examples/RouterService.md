@@ -40,7 +40,7 @@ Within the Bionic Boilerplate, the route-definition is done within ./src/routes/
 import * as React from 'react';
 import DemoContent from './DemoContent';
 import Home from './Home';
-import { IRouteConfig } from '@daimler/ftk-core';
+import { IRouteConfig } from '@mercedes-benz/ftk-core';
 
 const routes: IRouteConfig[] = [
   {
@@ -67,7 +67,7 @@ To display the route content within your application, simply load the Route-Comp
 ```tsx
 //...
 
-import { Route } from '@daimler/ftk-core';
+import { Route } from '@mercedes-benz/ftk-core';
 import routes from './routes';
 
 //...
@@ -92,7 +92,7 @@ To get a link based on the route-name, use the linkTo-Method from the RouterServ
 
 ```tsx
 import * as React from 'react';
-import { inject, withInject, RouterService } from '@daimler/ftk-core';
+import { inject, withInject, RouterService } from '@mercedes-benz/ftk-core';
 
 class Home extends React.Component<{}, {}> {
     @inject()
@@ -158,7 +158,7 @@ The route-parameters are attached to the parameter-member of every route:
 
 ```tsx
 import * as React from 'react';
-import { inject, withInject, RouterService } from '@daimler/ftk-core';
+import { inject, withInject, RouterService } from '@mercedes-benz/ftk-core';
 
 class Details extends React.Component<{}, {}> {
     @inject()
@@ -203,7 +203,7 @@ The query-parameters are attached to the query-member of every route:
 
 ```tsx
 import * as React from 'react';
-import { inject, withInject, RouterService } from '@daimler/ftk-core';
+import { inject, withInject, RouterService } from '@mercedes-benz/ftk-core';
 
 class DemoContent extends React.Component<{}, {}> {
     @inject()

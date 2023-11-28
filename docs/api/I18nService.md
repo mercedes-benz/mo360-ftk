@@ -14,7 +14,7 @@ ___
 ## Access through injection:
 
 ```tsx
-import { inject, withInject, I18nService } from '@daimler/ftk-core';
+import { inject, withInject, I18nService } from '@mercedes-benz/ftk-core';
 // ...
 class Example extends React.Component<WithStyles<{}>, {}> {
   @inject()
@@ -28,7 +28,7 @@ ___
 
 ## Access through hook
 ```tsx
-import { useI18n } from '@daimler/ftk-core';
+import { useI18n } from '@mercedes-benz/ftk-core';
 // ...
 const i18n = useI18n();
 // ...

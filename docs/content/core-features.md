@@ -12,7 +12,7 @@ The FTK uses the React Context together with Inversify to make dependencies avai
 
 Within each React-component below App, you can access the core-features with an injection like this:
 ```ts
-import { RouterService, inject, withInject } from '@daimler/ftk-core';
+import { RouterService, inject, withInject } from '@mercedes-benz/ftk-core';
 
 class ExampleClass extends React.Component<{}, {}> {
   @inject()
@@ -29,7 +29,7 @@ Outside of classes, the core features can be accessed by React Hooks.
 
 Example:
 ```ts
-import { useRouter } from '@daimler/ftk-core';
+import { useRouter } from '@mercedes-benz/ftk-core';
 
 export default function exampleFunction() {
   const router = useRouter();
@@ -43,7 +43,7 @@ The router service provides the logic for routing. The FTK provides an own route
 
 Access through injection:
 ```ts
-import { RouterService } from '@daimler/ftk-core';
+import { RouterService } from '@mercedes-benz/ftk-core';
 // ...
 
 @inject()
@@ -52,7 +52,7 @@ public router!: RouterService;
 
 Access through Hook:
 ```ts
-import { useRouter } from '@daimler/ftk-core';
+import { useRouter } from '@mercedes-benz/ftk-core';
 // ...
 
 const router = useRouter();
@@ -66,7 +66,7 @@ ___
 The i18n Service provides a basic translation functionality. It requires a Translation-Map provided by the TranslationProvider, which has to be nested within the App component like this (example ./src/App.tsx):
 
 ```ts
-import { IDiContainer, IRouteConfig, ISwidget, Route, serviceIds, App, TranslationProvider } from '@daimler/ftk-core';
+import { IDiContainer, IRouteConfig, ISwidget, Route, serviceIds, App, TranslationProvider } from '@mercedes-benz/ftk-core';
 import * as React from 'react';
 import TranslationsI18n from './globals/i18n/Translations.i18n';
 
@@ -84,7 +84,7 @@ import TranslationsI18n from './globals/i18n/Translations.i18n';
 
 Access through injection:
 ```ts
-import { I18nService } from '@daimler/ftk-core';
+import { I18nService } from '@mercedes-benz/ftk-core';
 // ...
 
 @inject()
@@ -93,7 +93,7 @@ public i18n!: I18nService;
 
 Access through Hook:
 ```ts
-import { useI18n } from '@daimler/ftk-core';
+import { useI18n } from '@mercedes-benz/ftk-core';
 // ...
 
 const i18n = useI18n();
@@ -126,7 +126,7 @@ export default swidget;
 
 Access through injection:
 ```ts
-import { ConfigService } from '@daimler/ftk-core';
+import { ConfigService } from '@mercedes-benz/ftk-core';
 // ...
 
 @inject()
@@ -135,7 +135,7 @@ public config!: ConfigService;
 
 Access through Hook:
 ```ts
-import { useConfig } from '@daimler/ftk-core';
+import { useConfig } from '@mercedes-benz/ftk-core';
 // ...
 
 const config = useConfig();

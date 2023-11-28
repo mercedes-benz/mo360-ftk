@@ -4,7 +4,7 @@ If you have multiple configurations for your project and do not want to duplicat
 
 ```tsx
 // Default configuration
-import { IConfigData } from '@daimler/ftk-core';
+import { IConfigData } from '@mercedes-benz/ftk-core';
 
 interface ProjectConfig = {
     backendUrl: string;
@@ -27,7 +27,7 @@ const config: IConfigData<ProjectConfig, {}> = {
 export default config;
 
 // extended configuration (production, integration, ...)
-import { IConfigData } from '@daimler/ftk-core';
+import { IConfigData } from '@mercedes-benz/ftk-core';
 import defaultConfig from './default';
 
 const config: IConfigData<ProjectConfig, {}> = {

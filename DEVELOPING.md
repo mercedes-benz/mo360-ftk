@@ -21,7 +21,7 @@
 The folders and their content briefly explained:
 
 * [docs](docs/): Documentation for the FTK usage
-* [packages/core](packages/core/): This is heart of the FTK. These files are packed as the npm module called `@daimler/ftk-core`
+* [packages/core](packages/core/): This is heart of the FTK. These files are packed as the npm module called `@mercedes-benz/ftk-core`
 * packages/example*: Contain the example code for host and swidget usages
 
 **Happy coding!**

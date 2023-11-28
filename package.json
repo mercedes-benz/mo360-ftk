@@ -22,6 +22,6 @@
     "packages/*"
   ],
   "scripts": {
-    "build:core": "yarn workspace @daimler/ftk-core build"
+    "build:core": "yarn workspace @mercedes-benz/ftk-core build"
   }
 }
