@@ -35,4 +35,4 @@ Please visit <https://www.mercedes-benz-techinnovation.com/en/imprint/> for info
 
 Notice: Before you use the program in productive use, please take all necessary precautions,
 e.g. testing and verifying the program with regard to your specific use.
-The program was tested solely for our own use cases, which might differ from yours.
+The source code has been tested solely for our own use cases, which might differ from yours.
