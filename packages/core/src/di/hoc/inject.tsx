@@ -1,9 +1,7 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
-
 import { interfaces } from 'inversify';
 import 'reflect-metadata';
 import { IDiContainer } from '../..';
+import serviceIds from '../../core/serviceIds';
 
 export default function inject(serviceId?: string | symbol | interfaces.Newable<{}>) {
   return (target: any, propertyKey: string) => {

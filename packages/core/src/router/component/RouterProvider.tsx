@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
-
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import BindToDi from '../../di/component/BindToDi';
@@ -78,7 +75,7 @@ const RouterProvider: React.FunctionComponent<IRouterProviderProps> = (props) =>
   return (
     <BindToDi
       services={(container) => {
-        container.bind<RouterServiceType>(serviceIds.routerService).toConstantValue({
+        container.bind<RouterServiceType>(serviceIds.routerService).toDynamicValue(() => ({
           getRoute() {
             return {
               parameter: activeRouteRef.current.parameter,
@@ -120,7 +117,7 @@ const RouterProvider: React.FunctionComponent<IRouterProviderProps> = (props) =>
               ),
             );
           },
-        });
+        }));
       }}
     >
       <Route key={activeRoute.url} url={activeRoute.url} />

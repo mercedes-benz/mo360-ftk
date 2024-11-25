@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2022 Mercedes-Benz Tech Innovation GmbH
-
 import { Container } from 'inversify';
 import { once } from 'lodash';
 import * as React from 'react';
@@ -67,6 +64,13 @@ export class App extends React.Component<IAppProps & PropsWithChildren, {}> {
         return custom;
       }
     }
+
+    // Bind RouterServiceType to the DI container
+    appContainer.bind(serviceIds.routerService).toDynamicValue(() => {
+      const routerService = containerFromContext?.get(serviceIds.routerService);
+      return routerService;
+    });
+
     return appContainer;
   });
 
